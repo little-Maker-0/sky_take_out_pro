@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="苍穹外卖高并发测试" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="token" elementType="HTTPArgument">
+            <stringProp name="Argument.name">token</stringProp>
+            <stringProp name="Argument.value">eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NzM5MTM2MDJ9.7Q4X8f9z7e6r5t4y3u2i1o0p9o8i7u6y5t4r3e2w1q</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1000</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="下单请求" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="下单参数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="addressBookId" elementType="HTTPArgument">
+                <stringProp name="Argument.name">addressBookId</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payMethod" elementType="HTTPArgument">
+                <stringProp name="Argument.name">payMethod</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="remark" elementType="HTTPArgument">
+                <stringProp name="Argument.name">remark</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="estimatedDeliveryTime" elementType="HTTPArgument">
+                <stringProp name="Argument.name">estimatedDeliveryTime</stringProp>
+                <stringProp name="Argument.value">2026-03-19 18:00:00</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="deliveryStatus" elementType="HTTPArgument">
+                <stringProp name="Argument.name">deliveryStatus</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="tablewareNumber" elementType="HTTPArgument">
+                <stringProp name="Argument.name">tablewareNumber</stringProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="tablewareStatus" elementType="HTTPArgument">
+                <stringProp name="Argument.name">tablewareStatus</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="packAmount" elementType="HTTPArgument">
+                <stringProp name="Argument.name">packAmount</stringProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="amount" elementType="HTTPArgument">
+                <stringProp name="Argument.name">amount</stringProp>
+                <stringProp name="Argument.value">88.5</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/user/order/submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="请求头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="authentication" elementType="Header">
+                <stringProp name="Header.name">authentication</stringProp>
+                <stringProp name="Header.value">${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+        </hashTree>
+
+
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

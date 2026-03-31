@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="MySQL高并发性能测试">
+      <stringProp name="TestPlan.comments">测试高并发下MySQL数据库的性能，包括查询、插入、更新和删除操作</stringProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="dbUrl" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbUrl</stringProp>
+            <stringProp name="Argument.value">jdbc:mysql://localhost:3306/sky_take_out?useSSL=false&amp;serverTimezone=Asia/Shanghai</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dbUser" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbUser</stringProp>
+            <stringProp name="Argument.value">root</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dbPassword" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbPassword</stringProp>
+            <stringProp name="Argument.value">smx</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount" elementType="HTTPArgument">
+            <stringProp name="Argument.name">threadCount</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampUpTime" elementType="HTTPArgument">
+            <stringProp name="Argument.name">rampUpTime</stringProp>
+            <stringProp name="Argument.value">60</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="loopCount" elementType="HTTPArgument">
+            <stringProp name="Argument.name">loopCount</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">E:\project\sky-take-out-main\mysql-connector-java-8.0.30.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="高并发线程组">
+        <stringProp name="ThreadGroup.num_threads">${threadCount}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUpTime}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器">
+          <stringProp name="LoopController.loops">${loopCount}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

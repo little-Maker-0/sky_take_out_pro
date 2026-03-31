@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="苍穹外卖高并发测试" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1000</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="用户登录" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户登录参数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="code" elementType="HTTPArgument">
+                <stringProp name="Argument.name">code</stringProp>
+                <stringProp name="Argument.value">test_code</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/user/user/login</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="请求头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
+            <stringProp name="JSONPostProcessor.postProcessor.vars">token</stringProp>
+            <stringProp name="JSONPostProcessor.postProcessor.jsonPath">$.data.token</stringProp>
+            <stringProp name="JSONPostProcessor.postProcessor.match_no">1</stringProp>
+          </JSONPostProcessor>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="下单请求" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="下单参数" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="addressBookId" elementType="HTTPArgument">
+                <stringProp name="Argument.name">addressBookId</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="payMethod" elementType="HTTPArgument">
+                <stringProp name="Argument.name">payMethod</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="remark" elementType="HTTPArgument">
+                <stringProp name="Argument.name">remark</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="estimatedDeliveryTime" elementType="HTTPArgument">
+                <stringProp name="Argument.name">estimatedDeliveryTime</stringProp>
+                <stringProp name="Argument.value">2026-03-19 18:00:00</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="deliveryStatus" elementType="HTTPArgument">
+                <stringProp name="Argument.name">deliveryStatus</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="tablewareNumber" elementType="HTTPArgument">
+                <stringProp name="Argument.name">tablewareNumber</stringProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="tablewareStatus" elementType="HTTPArgument">
+                <stringProp name="Argument.name">tablewareStatus</stringProp>
+                <stringProp name="Argument.value">1</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="packAmount" elementType="HTTPArgument">
+                <stringProp name="Argument.name">packAmount</stringProp>
+                <stringProp name="Argument.value">2</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="amount" elementType="HTTPArgument">
+                <stringProp name="Argument.name">amount</stringProp>
+                <stringProp name="Argument.value">88.5</stringProp>
+                <boolProp name="Argument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8080</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/user/order/submit</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="请求头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="authentication" elementType="Header">
+                <stringProp name="Header.name">authentication</stringProp>
+                <stringProp name="Header.value">${token}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+        </hashTree>
+        <ViewResultsTree guiclass="ViewResultsTree" testclass="ViewResultsTree" testname="查看结果树" enabled="true">
+          <boolProp name="ViewResultsTree.showMetadata">true</boolProp>
+          <boolProp name="ViewResultsTree.showSamplerProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showAssertions">true</boolProp>
+          <boolProp name="ViewResultsTree.showAssertionResults">true</boolProp>
+          <boolProp name="ViewResultsTree.showScript">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseData">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showRequestHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showRequest">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponse">true</boolProp>
+          <boolProp name="ViewResultsTree.showEmptyResponse">true</boolProp>
+          <boolProp name="ViewResultsTree.showBinaryResponse">true</boolProp>
+          <boolProp name="ViewResultsTree.showXML">true</boolProp>
+          <boolProp name="ViewResultsTree.showHTML">true</boolProp>
+          <boolProp name="ViewResultsTree.showJSON">true</boolProp>
+          <boolProp name="ViewResultsTree.showText">true</boolProp>
+          <boolProp name="ViewResultsTree.showJMeterProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showSystemProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showVariables">true</boolProp>
+          <boolProp name="ViewResultsTree.showOnlyFailures">false</boolProp>
+          <boolProp name="ViewResultsTree.showSuccessfulResponses">true</boolProp>
+          <boolProp name="ViewResultsTree.showUnsuccessfulResponses">true</boolProp>
+          <boolProp name="ViewResultsTree.showTiming">true</boolProp>
+          <boolProp name="ViewResultsTree.showSubresults">true</boolProp>
+          <boolProp name="ViewResultsTree.showParent">true</boolProp>
+          <boolProp name="ViewResultsTree.showIcon">true</boolProp>
+          <boolProp name="ViewResultsTree.showTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showCode">true</boolProp>
+          <boolProp name="ViewResultsTree.showMessage">true</boolProp>
+          <boolProp name="ViewResultsTree.showThreadName">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleCount">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleStartTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleEndTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showLatency">true</boolProp>
+          <boolProp name="ViewResultsTree.showConnectTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showIdleTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showBandwidth">true</boolProp>
+          <boolProp name="ViewResultsTree.showSentBytes">true</boolProp>
+          <boolProp name="ViewResultsTree.showReceivedBytes">true</boolProp>
+          <boolProp name="ViewResultsTree.showDataEncoding">true</boolProp>
+          <boolProp name="ViewResultsTree.showDataType">true</boolProp>
+          <boolProp name="ViewResultsTree.showURL">true</boolProp>
+          <boolProp name="ViewResultsTree.showCookies">true</boolProp>
+          <boolProp name="ViewResultsTree.showCache">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseXML">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponsePDF">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseCSV">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseHTML">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseText">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseJSON">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseBinary">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveRequest">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveRequestHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveAs">true</boolProp>
+          <boolProp name="ViewResultsTree.showRemove">true</boolProp>
+          <boolProp name="ViewResultsTree.showReload">true</boolProp>
+          <boolProp name="ViewResultsTree.showClear">true</boolProp>
+          <boolProp name="ViewResultsTree.showHelp">true</boolProp>
+          <boolProp name="ViewResultsTree.showSearch">true</boolProp>
+          <boolProp name="ViewResultsTree.showHighlight">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseTimeGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showAggregateReport">true</boolProp>
+          <boolProp name="ViewResultsTree.showGraphResults">true</boolProp>
+          <boolProp name="ViewResultsTree.showSimpleTable">true</boolProp>
+          <boolProp name="ViewResultsTree.showDistributionGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showThroughputGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showLatencyGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseCodes">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseTimes">true</boolProp>
+          <boolProp name="ViewResultsTree.showBytes">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleCount">true</boolProp>
+          <boolProp name="ViewResultsTree.showThreadCounts">true</boolProp>
+          <boolProp name="ViewResultsTree.showURLs">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileNames">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileSizes">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileTypes">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileContents">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileCreationTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileLastModifiedTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showFilePermissions">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileOwner">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileGroup">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileInode">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileDevice">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileLinks">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileBlocks">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileBlockSize">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileIOBlocks">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileIOBlockSize">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileDirectory">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileSymlink">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileHardlink">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileSocket">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileFifo">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileCharDevice">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileBlockDevice">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileUnknown">true</boolProp>
+        </ViewResultsTree>
+        <hashTree/>
+        <AggregateReport guiclass="AggregateReportGui" testclass="AggregateReport" testname="聚合报告" enabled="true">
+          <boolProp name="AggregateReport.showLabel">true</boolProp>
+          <boolProp name="AggregateReport.showSamples">true</boolProp>
+          <boolProp name="AggregateReport.showAverage">true</boolProp>
+          <boolProp name="AggregateReport.showMedian">true</boolProp>
+          <boolProp name="AggregateReport.show90%Line">true</boolProp>
+          <boolProp name="AggregateReport.show95%Line">true</boolProp>
+          <boolProp name="AggregateReport.show99%Line">true</boolProp>
+          <boolProp name="AggregateReport.showMin">true</boolProp>
+          <boolProp name="AggregateReport.showMax">true</boolProp>
+          <boolProp name="AggregateReport.showError">true</boolProp>
+          <boolProp name="AggregateReport.showThroughput">true</boolProp>
+          <boolProp name="AggregateReport.showReceivedKBytesPerSec">true</boolProp>
+          <boolProp name="AggregateReport.showSentKBytesPerSec">true</boolProp>
+          <boolProp name="AggregateReport.includeSubResults">true</boolProp>
+        </AggregateReport>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

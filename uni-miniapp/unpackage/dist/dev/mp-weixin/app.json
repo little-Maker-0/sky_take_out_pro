@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/address/address",
+    "pages/checkout/checkout"
+  ],
+  "subPackages": [],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#E95F3C",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "点餐"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

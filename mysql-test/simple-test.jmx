@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="org.apache.jmeter.testelement.TestPlan" testname="MySQL高并发性能测试" enabled="true">
+      <stringProp name="TestPlan.comments">测试高并发下MySQL数据库的性能，包括查询、插入、更新和删除操作</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="org.apache.jmeter.config.Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="dbUrl" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbUrl</stringProp>
+            <stringProp name="Argument.value">jdbc:mysql://localhost:3306/sky_take_out?useSSL=false&amp;serverTimezone=Asia/Shanghai</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dbUser" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbUser</stringProp>
+            <stringProp name="Argument.value">root</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dbPassword" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbPassword</stringProp>
+            <stringProp name="Argument.value">smx</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount" elementType="HTTPArgument">
+            <stringProp name="Argument.name">threadCount</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampUpTime" elementType="HTTPArgument">
+            <stringProp name="Argument.name">rampUpTime</stringProp>
+            <stringProp name="Argument.value">60</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="loopCount" elementType="HTTPArgument">
+            <stringProp name="Argument.name">loopCount</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">E:\project\sky-take-out-main\mysql-connector-java-8.0.30.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="org.apache.jmeter.threads.ThreadGroup" testname="高并发线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="org.apache.jmeter.control.LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${loopCount}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${threadCount}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUpTime}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="JDBCDataSourceGui" testclass="org.apache.jmeter.protocol.jdbc.config.DataSourceElement" testname="JDBC连接配置" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="poolMax>0">200</stringProp>
+          <stringProp name="timeout>0">30000</stringProp>
+          <stringProp name="statementCacheSize>0">200</stringProp>
+          <stringProp name="driver">com.mysql.cj.jdbc.Driver</stringProp>
+          <stringProp name="url">${dbUrl}</stringProp>
+          <stringProp name="username">${dbUser}</stringProp>
+          <stringProp name="password">${dbPassword}</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="org.apache.jmeter.protocol.jdbc.sampler.JDBCSampler" testname="查询用户信息" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT * FROM user WHERE id = ${__Random(1, 12)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="org.apache.jmeter.protocol.jdbc.sampler.JDBCSampler" testname="查询订单信息" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT * FROM orders WHERE id = ${__Random(1, 5)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="org.apache.jmeter.protocol.jdbc.sampler.JDBCSampler" testname="查询菜品信息" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT * FROM dish WHERE id = ${__Random(46, 70)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="org.apache.jmeter.protocol.jdbc.sampler.JDBCSampler" testname="插入购物车记录" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">INSERT INTO shopping_cart (name, image, user_id, dish_id, setmeal_id, dish_flavor, number, amount, create_time) VALUES ('测试菜品', 'https://example.com/test.jpg', ${__Random(1, 12)}, ${__Random(46, 70)}, NULL, '微辣', 1, 25.5, NOW())</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="org.apache.jmeter.protocol.jdbc.sampler.JDBCSampler" testname="更新订单状态" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE orders SET status = 2 WHERE id = ${__Random(1, 5)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="org.apache.jmeter.protocol.jdbc.sampler.JDBCSampler" testname="删除购物车记录" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">DELETE FROM shopping_cart LIMIT 1</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,16 @@
+{
+    "name" : "uni-miniapp",
+    "appid" : "__UNI__SKYTAKEOUT__",
+    "description" : "根据 sky-server 接口重建的小程序",
+    "versionName" : "1.0.0",
+    "versionCode" : 100,
+    "transformPx" : false,
+    "mp-weixin" : {
+        "appid" : "wxae5e22f4823df8b0",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true,
+        "permission" : {}
+    }
+}

@@ -1,0 +1,1001 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1773929026102,879,下单请求,401,,线程组 1-19,,false,,210,469,33,33,http://localhost:8080/user/order/submit,868,0,1
+1773929025373,1609,下单请求,401,,线程组 1-6,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1597,0,121
+1773929025445,1535,下单请求,401,,线程组 1-8,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1525,0,49
+1773929026409,573,下单请求,401,,线程组 1-24,,false,,210,469,33,33,http://localhost:8080/user/order/submit,561,0,7
+1773929025683,1299,下单请求,401,,线程组 1-12,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1286,0,1
+1773929026702,276,下单请求,401,,线程组 1-29,,false,,210,469,33,33,http://localhost:8080/user/order/submit,273,0,2
+1773929025373,1609,下单请求,401,,线程组 1-5,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1597,0,121
+1773929026041,941,下单请求,401,,线程组 1-18,,false,,210,469,33,33,http://localhost:8080/user/order/submit,929,0,1
+1773929025982,998,下单请求,401,,线程组 1-17,,false,,210,469,33,33,http://localhost:8080/user/order/submit,990,0,1
+1773929026884,96,下单请求,401,,线程组 1-32,,false,,210,469,33,33,http://localhost:8080/user/order/submit,89,0,1
+1773929026945,37,下单请求,401,,线程组 1-33,,false,,210,469,33,33,http://localhost:8080/user/order/submit,25,0,14
+1773929026284,698,下单请求,401,,线程组 1-22,,false,,210,469,33,33,http://localhost:8080/user/order/submit,686,0,2
+1773929026529,451,下单请求,401,,线程组 1-26,,false,,210,469,33,33,http://localhost:8080/user/order/submit,444,0,5
+1773929025388,1592,下单请求,401,,线程组 1-7,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1585,0,106
+1773929025806,1174,下单请求,401,,线程组 1-14,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1164,0,2
+1773929026463,517,下单请求,401,,线程组 1-25,,false,,210,469,33,33,http://localhost:8080/user/order/submit,507,0,1
+1773929026344,636,下单请求,401,,线程组 1-23,,false,,210,469,33,33,http://localhost:8080/user/order/submit,626,0,1
+1773929025373,1607,下单请求,401,,线程组 1-4,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1597,0,121
+1773929026646,334,下单请求,401,,线程组 1-28,,false,,210,469,33,33,http://localhost:8080/user/order/submit,326,0,2
+1773929025743,1240,下单请求,401,,线程组 1-13,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1227,0,1
+1773929026164,819,下单请求,401,,线程组 1-20,,false,,210,469,33,33,http://localhost:8080/user/order/submit,806,0,1
+1773929026224,759,下单请求,401,,线程组 1-21,,false,,210,469,33,33,http://localhost:8080/user/order/submit,749,0,1
+1773929025564,1420,下单请求,401,,线程组 1-10,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1406,0,1
+1773929026763,221,下单请求,401,,线程组 1-30,,false,,210,469,33,33,http://localhost:8080/user/order/submit,207,0,1
+1773929025373,1611,下单请求,401,,线程组 1-3,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1596,0,121
+1773929025373,1611,下单请求,401,,线程组 1-1,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1596,0,121
+1773929025376,1608,下单请求,401,,线程组 1-2,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1593,0,118
+1773929025626,1358,下单请求,401,,线程组 1-11,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1343,0,2
+1773929025922,1062,下单请求,401,,线程组 1-16,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1047,0,1
+1773929026823,162,下单请求,401,,线程组 1-31,,false,,210,469,33,33,http://localhost:8080/user/order/submit,146,0,1
+1773929025505,1479,下单请求,401,,线程组 1-9,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1464,0,1
+1773929026586,399,下单请求,401,,线程组 1-27,,false,,210,469,33,33,http://localhost:8080/user/order/submit,389,0,1
+1773929025863,1121,下单请求,401,,线程组 1-15,,false,,210,469,33,33,http://localhost:8080/user/order/submit,1107,0,2
+1773929027023,5,下单请求,401,,线程组 1-34,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929027071,4,下单请求,401,,线程组 1-35,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929027138,6,下单请求,401,,线程组 1-36,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929027187,10,下单请求,401,,线程组 1-37,,false,,210,469,1,1,http://localhost:8080/user/order/submit,10,0,1
+1773929027254,6,下单请求,401,,线程组 1-38,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929027308,5,下单请求,401,,线程组 1-39,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929027369,8,下单请求,401,,线程组 1-40,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929027433,8,下单请求,401,,线程组 1-41,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,3
+1773929027493,6,下单请求,401,,线程组 1-42,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929027544,16,下单请求,401,,线程组 1-43,,false,,210,469,1,1,http://localhost:8080/user/order/submit,16,0,6
+1773929027609,6,下单请求,401,,线程组 1-44,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929027670,4,下单请求,401,,线程组 1-45,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929027738,6,下单请求,401,,线程组 1-46,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929027790,6,下单请求,401,,线程组 1-47,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929027859,7,下单请求,401,,线程组 1-48,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929027917,7,下单请求,401,,线程组 1-49,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929027971,9,下单请求,401,,线程组 1-50,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,2
+1773929028028,8,下单请求,401,,线程组 1-51,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929028090,8,下单请求,401,,线程组 1-52,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,3
+1773929028145,8,下单请求,401,,线程组 1-53,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929028217,5,下单请求,401,,线程组 1-54,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929028271,7,下单请求,401,,线程组 1-55,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929028331,8,下单请求,401,,线程组 1-56,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929028391,7,下单请求,401,,线程组 1-57,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,1
+1773929028448,8,下单请求,401,,线程组 1-58,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929028507,5,下单请求,401,,线程组 1-59,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929028571,9,下单请求,401,,线程组 1-60,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,2
+1773929028635,8,下单请求,401,,线程组 1-61,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929028696,6,下单请求,401,,线程组 1-62,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929028756,7,下单请求,401,,线程组 1-63,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929028809,10,下单请求,401,,线程组 1-64,,false,,210,469,1,1,http://localhost:8080/user/order/submit,10,0,3
+1773929028873,6,下单请求,401,,线程组 1-65,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929028935,5,下单请求,401,,线程组 1-66,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929028992,5,下单请求,401,,线程组 1-67,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929029057,3,下单请求,401,,线程组 1-68,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929029115,4,下单请求,401,,线程组 1-69,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929029166,4,下单请求,401,,线程组 1-70,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929029240,7,下单请求,401,,线程组 1-71,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929029290,7,下单请求,401,,线程组 1-72,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929029357,7,下单请求,401,,线程组 1-73,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929029411,6,下单请求,401,,线程组 1-74,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929029474,7,下单请求,401,,线程组 1-75,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929029527,7,下单请求,401,,线程组 1-76,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929029609,6,下单请求,401,,线程组 1-77,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929029652,4,下单请求,401,,线程组 1-78,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929029709,15,下单请求,401,,线程组 1-79,,false,,210,469,1,1,http://localhost:8080/user/order/submit,15,0,9
+1773929029770,6,下单请求,401,,线程组 1-80,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929029841,5,下单请求,401,,线程组 1-81,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929029891,8,下单请求,401,,线程组 1-82,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,3
+1773929029948,13,下单请求,401,,线程组 1-83,,false,,210,469,1,1,http://localhost:8080/user/order/submit,13,0,6
+1773929030013,10,下单请求,401,,线程组 1-84,,false,,210,469,1,1,http://localhost:8080/user/order/submit,10,0,4
+1773929030082,11,下单请求,401,,线程组 1-85,,false,,210,469,1,1,http://localhost:8080/user/order/submit,11,0,6
+1773929030142,12,下单请求,401,,线程组 1-86,,false,,210,469,1,1,http://localhost:8080/user/order/submit,12,0,4
+1773929030194,9,下单请求,401,,线程组 1-87,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,4
+1773929030258,7,下单请求,401,,线程组 1-88,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929030307,6,下单请求,401,,线程组 1-89,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929030372,6,下单请求,401,,线程组 1-90,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929030423,6,下单请求,401,,线程组 1-91,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929030489,5,下单请求,401,,线程组 1-92,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929030548,4,下单请求,401,,线程组 1-93,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929030611,4,下单请求,401,,线程组 1-94,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929030664,2,下单请求,401,,线程组 1-95,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929030729,4,下单请求,401,,线程组 1-96,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929030794,6,下单请求,401,,线程组 1-97,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929030852,4,下单请求,401,,线程组 1-98,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929030907,8,下单请求,401,,线程组 1-99,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,6
+1773929030967,3,下单请求,401,,线程组 1-100,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929031027,4,下单请求,401,,线程组 1-101,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929031102,6,下单请求,401,,线程组 1-102,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929031160,3,下单请求,401,,线程组 1-103,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929031215,4,下单请求,401,,线程组 1-104,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929031273,4,下单请求,401,,线程组 1-105,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929031334,5,下单请求,401,,线程组 1-106,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929031396,3,下单请求,401,,线程组 1-107,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929031456,3,下单请求,401,,线程组 1-108,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929031506,5,下单请求,401,,线程组 1-109,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929031573,4,下单请求,401,,线程组 1-110,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929031634,3,下单请求,401,,线程组 1-111,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929031690,4,下单请求,401,,线程组 1-112,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929031759,4,下单请求,401,,线程组 1-113,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929031809,4,下单请求,401,,线程组 1-114,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929031864,4,下单请求,401,,线程组 1-115,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929031937,4,下单请求,401,,线程组 1-116,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929031988,4,下单请求,401,,线程组 1-117,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929032046,9,下单请求,401,,线程组 1-118,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,2
+1773929032110,6,下单请求,401,,线程组 1-119,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929032170,17,下单请求,401,,线程组 1-120,,false,,210,469,1,1,http://localhost:8080/user/order/submit,17,0,6
+1773929032237,12,下单请求,401,,线程组 1-121,,false,,210,469,1,1,http://localhost:8080/user/order/submit,12,0,5
+1773929032289,5,下单请求,401,,线程组 1-122,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929032356,11,下单请求,401,,线程组 1-123,,false,,210,469,1,1,http://localhost:8080/user/order/submit,11,0,5
+1773929032414,5,下单请求,401,,线程组 1-124,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929032463,10,下单请求,401,,线程组 1-125,,false,,210,469,1,1,http://localhost:8080/user/order/submit,10,0,1
+1773929032531,3,下单请求,401,,线程组 1-126,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929032583,5,下单请求,401,,线程组 1-127,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929032654,24,下单请求,401,,线程组 1-128,,false,,210,469,1,1,http://localhost:8080/user/order/submit,24,0,7
+1773929032710,12,下单请求,401,,线程组 1-129,,false,,210,469,1,1,http://localhost:8080/user/order/submit,12,0,4
+1773929032774,4,下单请求,401,,线程组 1-130,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929032832,3,下单请求,401,,线程组 1-131,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929032885,4,下单请求,401,,线程组 1-132,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929032961,9,下单请求,401,,线程组 1-133,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,5
+1773929033015,4,下单请求,401,,线程组 1-134,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929033069,5,下单请求,401,,线程组 1-135,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929033131,7,下单请求,401,,线程组 1-136,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929033187,8,下单请求,401,,线程组 1-137,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,4
+1773929033245,6,下单请求,401,,线程组 1-138,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929033305,7,下单请求,401,,线程组 1-139,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929033364,3,下单请求,401,,线程组 1-140,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929033425,3,下单请求,401,,线程组 1-141,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929033487,5,下单请求,401,,线程组 1-142,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929033550,7,下单请求,401,,线程组 1-143,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929033612,6,下单请求,401,,线程组 1-144,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929033664,6,下单请求,401,,线程组 1-145,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929033725,6,下单请求,401,,线程组 1-146,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929033797,7,下单请求,401,,线程组 1-147,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929033847,7,下单请求,401,,线程组 1-148,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929033907,7,下单请求,401,,线程组 1-149,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,1
+1773929033979,5,下单请求,401,,线程组 1-150,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929034034,8,下单请求,401,,线程组 1-151,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,3
+1773929034097,6,下单请求,401,,线程组 1-152,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929034161,5,下单请求,401,,线程组 1-153,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929034209,6,下单请求,401,,线程组 1-154,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929034265,5,下单请求,401,,线程组 1-155,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929034331,7,下单请求,401,,线程组 1-156,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929034386,5,下单请求,401,,线程组 1-157,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929034446,6,下单请求,401,,线程组 1-158,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929034510,5,下单请求,401,,线程组 1-159,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929034567,6,下单请求,401,,线程组 1-160,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929034627,5,下单请求,401,,线程组 1-161,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929034688,6,下单请求,401,,线程组 1-162,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929034756,5,下单请求,401,,线程组 1-163,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929034805,6,下单请求,401,,线程组 1-164,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929034870,3,下单请求,401,,线程组 1-165,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929034936,7,下单请求,401,,线程组 1-166,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929034991,5,下单请求,401,,线程组 1-167,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929035048,8,下单请求,401,,线程组 1-168,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929035111,6,下单请求,401,,线程组 1-169,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929035174,3,下单请求,401,,线程组 1-170,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929035228,5,下单请求,401,,线程组 1-171,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929035287,3,下单请求,401,,线程组 1-172,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929035363,7,下单请求,401,,线程组 1-173,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929035408,7,下单请求,401,,线程组 1-174,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929035473,4,下单请求,401,,线程组 1-175,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929035536,6,下单请求,401,,线程组 1-176,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929035592,7,下单请求,401,,线程组 1-177,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929035647,7,下单请求,401,,线程组 1-178,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929035706,7,下单请求,401,,线程组 1-179,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929035766,4,下单请求,401,,线程组 1-180,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929035829,3,下单请求,401,,线程组 1-181,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929035883,5,下单请求,401,,线程组 1-182,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929035954,6,下单请求,401,,线程组 1-183,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929036011,5,下单请求,401,,线程组 1-184,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929036079,4,下单请求,401,,线程组 1-185,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929036128,5,下单请求,401,,线程组 1-186,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929036185,3,下单请求,401,,线程组 1-187,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929036244,3,下单请求,401,,线程组 1-188,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929036307,4,下单请求,401,,线程组 1-189,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929036382,6,下单请求,401,,线程组 1-190,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929036430,7,下单请求,401,,线程组 1-191,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,1
+1773929036488,7,下单请求,401,,线程组 1-192,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929036557,4,下单请求,401,,线程组 1-193,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929036603,4,下单请求,401,,线程组 1-194,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929036668,5,下单请求,401,,线程组 1-195,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929036724,3,下单请求,401,,线程组 1-196,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929036791,3,下单请求,401,,线程组 1-197,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929036858,3,下单请求,401,,线程组 1-198,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929036906,5,下单请求,401,,线程组 1-199,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929036976,3,下单请求,401,,线程组 1-200,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929037034,2,下单请求,401,,线程组 1-201,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929037087,3,下单请求,401,,线程组 1-202,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929037146,4,下单请求,401,,线程组 1-203,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929037206,4,下单请求,401,,线程组 1-204,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929037277,5,下单请求,401,,线程组 1-205,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929037324,5,下单请求,401,,线程组 1-206,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929037387,4,下单请求,401,,线程组 1-207,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929037447,3,下单请求,401,,线程组 1-208,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929037505,3,下单请求,401,,线程组 1-209,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929037576,7,下单请求,401,,线程组 1-210,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929037635,6,下单请求,401,,线程组 1-211,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929037695,6,下单请求,401,,线程组 1-212,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,1
+1773929037757,8,下单请求,401,,线程组 1-213,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,3
+1773929037810,6,下单请求,401,,线程组 1-214,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929037866,6,下单请求,401,,线程组 1-215,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929037939,5,下单请求,401,,线程组 1-216,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929037984,5,下单请求,401,,线程组 1-217,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929038047,5,下单请求,401,,线程组 1-218,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929038118,3,下单请求,401,,线程组 1-219,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929038167,7,下单请求,401,,线程组 1-220,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929038225,7,下单请求,401,,线程组 1-221,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,4
+1773929038287,2,下单请求,401,,线程组 1-222,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929038350,4,下单请求,401,,线程组 1-223,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929038412,8,下单请求,401,,线程组 1-224,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,2
+1773929038469,4,下单请求,401,,线程组 1-225,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929038533,8,下单请求,401,,线程组 1-226,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,4
+1773929038591,3,下单请求,401,,线程组 1-227,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929038657,3,下单请求,401,,线程组 1-228,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929038715,3,下单请求,401,,线程组 1-229,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929038765,5,下单请求,401,,线程组 1-230,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929038826,4,下单请求,401,,线程组 1-231,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929038887,5,下单请求,401,,线程组 1-232,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929038947,5,下单请求,401,,线程组 1-233,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929039010,4,下单请求,401,,线程组 1-234,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929039072,2,下单请求,401,,线程组 1-235,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929039133,4,下单请求,401,,线程组 1-236,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929039194,3,下单请求,401,,线程组 1-237,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929039244,3,下单请求,401,,线程组 1-238,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929039327,3,下单请求,401,,线程组 1-239,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929039391,2,下单请求,401,,线程组 1-240,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929039455,3,下单请求,401,,线程组 1-241,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929039491,3,下单请求,401,,线程组 1-242,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929039551,3,下单请求,401,,线程组 1-243,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929039603,4,下单请求,401,,线程组 1-244,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929039664,3,下单请求,401,,线程组 1-245,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929039724,3,下单请求,401,,线程组 1-246,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929039794,5,下单请求,401,,线程组 1-247,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929039849,4,下单请求,401,,线程组 1-248,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929039913,7,下单请求,401,,线程组 1-249,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929039968,5,下单请求,401,,线程组 1-250,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929040044,10,下单请求,401,,线程组 1-251,,false,,210,469,1,1,http://localhost:8080/user/order/submit,10,0,6
+1773929040087,3,下单请求,401,,线程组 1-252,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929040145,4,下单请求,401,,线程组 1-253,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929040210,7,下单请求,401,,线程组 1-254,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929040265,4,下单请求,401,,线程组 1-255,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929040329,34,下单请求,401,,线程组 1-256,,false,,210,469,1,1,http://localhost:8080/user/order/submit,34,0,31
+1773929040393,8,下单请求,401,,线程组 1-257,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,4
+1773929040457,5,下单请求,401,,线程组 1-258,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929040512,3,下单请求,401,,线程组 1-259,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929040570,5,下单请求,401,,线程组 1-260,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929040631,4,下单请求,401,,线程组 1-261,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929040698,5,下单请求,401,,线程组 1-262,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929040749,3,下单请求,401,,线程组 1-263,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929040810,3,下单请求,401,,线程组 1-264,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929040880,4,下单请求,401,,线程组 1-265,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929040935,4,下单请求,401,,线程组 1-266,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929040994,3,下单请求,401,,线程组 1-267,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929041054,5,下单请求,401,,线程组 1-268,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929041108,2,下单请求,401,,线程组 1-269,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929041167,2,下单请求,401,,线程组 1-270,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929041233,5,下单请求,401,,线程组 1-271,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929041291,4,下单请求,401,,线程组 1-272,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929041356,4,下单请求,401,,线程组 1-273,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929041418,4,下单请求,401,,线程组 1-274,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929041464,3,下单请求,401,,线程组 1-275,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929041534,3,下单请求,401,,线程组 1-276,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929041595,2,下单请求,401,,线程组 1-277,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929041645,4,下单请求,401,,线程组 1-278,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929041709,4,下单请求,401,,线程组 1-279,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929041768,3,下单请求,401,,线程组 1-280,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929041831,4,下单请求,401,,线程组 1-281,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929041894,4,下单请求,401,,线程组 1-282,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929041954,5,下单请求,401,,线程组 1-283,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929042004,3,下单请求,401,,线程组 1-284,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929042065,5,下单请求,401,,线程组 1-285,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929042134,6,下单请求,401,,线程组 1-286,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929042188,4,下单请求,401,,线程组 1-287,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929042244,3,下单请求,401,,线程组 1-288,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929042308,3,下单请求,401,,线程组 1-289,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929042372,2,下单请求,401,,线程组 1-290,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929042427,2,下单请求,401,,线程组 1-291,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929042484,2,下单请求,401,,线程组 1-292,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929042555,5,下单请求,401,,线程组 1-293,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929042607,4,下单请求,401,,线程组 1-294,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929042669,3,下单请求,401,,线程组 1-295,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929042726,5,下单请求,401,,线程组 1-296,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929042789,4,下单请求,401,,线程组 1-297,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929042844,3,下单请求,401,,线程组 1-298,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929042911,3,下单请求,401,,线程组 1-299,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929042968,6,下单请求,401,,线程组 1-300,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929043025,5,下单请求,401,,线程组 1-301,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929043093,2,下单请求,401,,线程组 1-302,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929043148,3,下单请求,401,,线程组 1-303,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929043211,4,下单请求,401,,线程组 1-304,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929043266,5,下单请求,401,,线程组 1-305,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929043331,5,下单请求,401,,线程组 1-306,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929043390,2,下单请求,401,,线程组 1-307,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929043452,5,下单请求,401,,线程组 1-308,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929043508,7,下单请求,401,,线程组 1-309,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,4
+1773929043577,5,下单请求,401,,线程组 1-310,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929043638,5,下单请求,401,,线程组 1-311,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929043694,3,下单请求,401,,线程组 1-312,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929043749,3,下单请求,401,,线程组 1-313,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929043809,5,下单请求,401,,线程组 1-314,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929043871,4,下单请求,401,,线程组 1-315,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929043929,3,下单请求,401,,线程组 1-316,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929043986,6,下单请求,401,,线程组 1-317,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929044053,9,下单请求,401,,线程组 1-318,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,4
+1773929044106,5,下单请求,401,,线程组 1-319,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929044167,4,下单请求,401,,线程组 1-320,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929044233,7,下单请求,401,,线程组 1-321,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,3
+1773929044289,4,下单请求,401,,线程组 1-322,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,3
+1773929044349,3,下单请求,401,,线程组 1-323,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929044408,3,下单请求,401,,线程组 1-324,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929044468,3,下单请求,401,,线程组 1-325,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929044537,5,下单请求,401,,线程组 1-326,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929044599,7,下单请求,401,,线程组 1-327,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,5
+1773929044646,4,下单请求,401,,线程组 1-328,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929044705,4,下单请求,401,,线程组 1-329,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929044772,4,下单请求,401,,线程组 1-330,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929044831,6,下单请求,401,,线程组 1-331,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929044899,4,下单请求,401,,线程组 1-332,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929044959,5,下单请求,401,,线程组 1-333,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929045015,5,下单请求,401,,线程组 1-334,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929045069,3,下单请求,401,,线程组 1-335,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929045134,3,下单请求,401,,线程组 1-336,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929045190,3,下单请求,401,,线程组 1-337,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929045246,4,下单请求,401,,线程组 1-338,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929045312,5,下单请求,401,,线程组 1-339,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929045366,3,下单请求,401,,线程组 1-340,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929045430,4,下单请求,401,,线程组 1-341,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,3
+1773929045487,5,下单请求,401,,线程组 1-342,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929045554,6,下单请求,401,,线程组 1-343,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929045605,4,下单请求,401,,线程组 1-344,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929045670,5,下单请求,401,,线程组 1-345,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929045730,6,下单请求,401,,线程组 1-346,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929045788,6,下单请求,401,,线程组 1-347,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929045856,7,下单请求,401,,线程组 1-348,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,6
+1773929045914,5,下单请求,401,,线程组 1-349,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929045972,5,下单请求,401,,线程组 1-350,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929046035,5,下单请求,401,,线程组 1-351,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929046088,2,下单请求,401,,线程组 1-352,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929046153,5,下单请求,401,,线程组 1-353,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929046206,3,下单请求,401,,线程组 1-354,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929046264,4,下单请求,401,,线程组 1-355,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929046333,2,下单请求,401,,线程组 1-356,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929046389,3,下单请求,401,,线程组 1-357,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929046457,5,下单请求,401,,线程组 1-358,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929046519,3,下单请求,401,,线程组 1-359,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929046566,4,下单请求,401,,线程组 1-360,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929046637,4,下单请求,401,,线程组 1-361,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929046692,3,下单请求,401,,线程组 1-362,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929046745,4,下单请求,401,,线程组 1-363,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929046816,2,下单请求,401,,线程组 1-364,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929046871,3,下单请求,401,,线程组 1-365,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929046937,3,下单请求,401,,线程组 1-366,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929046997,3,下单请求,401,,线程组 1-367,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929047043,3,下单请求,401,,线程组 1-368,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929047118,2,下单请求,401,,线程组 1-369,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929047167,2,下单请求,401,,线程组 1-370,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929047232,4,下单请求,401,,线程组 1-371,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929047287,4,下单请求,401,,线程组 1-372,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929047348,5,下单请求,401,,线程组 1-373,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929047407,5,下单请求,401,,线程组 1-374,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929047463,5,下单请求,401,,线程组 1-375,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929047526,3,下单请求,401,,线程组 1-376,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929047595,5,下单请求,401,,线程组 1-377,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929047650,3,下单请求,401,,线程组 1-378,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929047705,5,下单请求,401,,线程组 1-379,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929047766,6,下单请求,401,,线程组 1-380,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929047831,4,下单请求,401,,线程组 1-381,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929047897,4,下单请求,401,,线程组 1-382,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929047947,5,下单请求,401,,线程组 1-383,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929048007,10,下单请求,401,,线程组 1-384,,false,,210,469,1,1,http://localhost:8080/user/order/submit,10,0,3
+1773929048069,8,下单请求,401,,线程组 1-385,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,5
+1773929048126,4,下单请求,401,,线程组 1-386,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929048196,5,下单请求,401,,线程组 1-387,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929048252,3,下单请求,401,,线程组 1-388,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929048311,4,下单请求,401,,线程组 1-389,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929048367,6,下单请求,401,,线程组 1-390,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929048432,3,下单请求,401,,线程组 1-391,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929048489,3,下单请求,401,,线程组 1-392,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929048564,4,下单请求,401,,线程组 1-393,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929048611,3,下单请求,401,,线程组 1-394,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929048674,6,下单请求,401,,线程组 1-395,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929048735,2,下单请求,401,,线程组 1-396,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929048797,4,下单请求,401,,线程组 1-397,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929048847,3,下单请求,401,,线程组 1-398,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929048909,4,下单请求,401,,线程组 1-399,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929048971,3,下单请求,401,,线程组 1-400,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929049030,4,下单请求,401,,线程组 1-401,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929049095,4,下单请求,401,,线程组 1-402,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929049152,4,下单请求,401,,线程组 1-403,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929049215,3,下单请求,401,,线程组 1-404,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929049268,2,下单请求,401,,线程组 1-405,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929049327,2,下单请求,401,,线程组 1-406,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929049390,2,下单请求,401,,线程组 1-407,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929049445,3,下单请求,401,,线程组 1-408,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929049510,3,下单请求,401,,线程组 1-409,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929049567,4,下单请求,401,,线程组 1-410,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929049637,4,下单请求,401,,线程组 1-411,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929049692,3,下单请求,401,,线程组 1-412,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929049747,3,下单请求,401,,线程组 1-413,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929049804,3,下单请求,401,,线程组 1-414,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929049870,4,下单请求,401,,线程组 1-415,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929049928,3,下单请求,401,,线程组 1-416,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929049985,4,下单请求,401,,线程组 1-417,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929050055,3,下单请求,401,,线程组 1-418,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929050109,3,下单请求,401,,线程组 1-419,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929050165,2,下单请求,401,,线程组 1-420,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929050234,4,下单请求,401,,线程组 1-421,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929050288,2,下单请求,401,,线程组 1-422,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929050354,8,下单请求,401,,线程组 1-423,,false,,210,469,1,1,http://localhost:8080/user/order/submit,8,0,6
+1773929050410,5,下单请求,401,,线程组 1-424,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929050470,5,下单请求,401,,线程组 1-425,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929050536,5,下单请求,401,,线程组 1-426,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929050583,5,下单请求,401,,线程组 1-427,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929050649,6,下单请求,401,,线程组 1-428,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,4
+1773929050707,4,下单请求,401,,线程组 1-429,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929050766,2,下单请求,401,,线程组 1-430,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929050841,4,下单请求,401,,线程组 1-431,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,3
+1773929050885,2,下单请求,401,,线程组 1-432,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929050953,3,下单请求,401,,线程组 1-433,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929051020,4,下单请求,401,,线程组 1-434,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929051065,3,下单请求,401,,线程组 1-435,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929051125,3,下单请求,401,,线程组 1-436,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929051183,4,下单请求,401,,线程组 1-437,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929051252,4,下单请求,401,,线程组 1-438,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929051309,3,下单请求,401,,线程组 1-439,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929051364,9,下单请求,401,,线程组 1-440,,false,,210,469,1,1,http://localhost:8080/user/order/submit,9,0,7
+1773929051435,4,下单请求,401,,线程组 1-441,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,3
+1773929051489,3,下单请求,401,,线程组 1-442,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929051557,7,下单请求,401,,线程组 1-443,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,5
+1773929051610,3,下单请求,401,,线程组 1-444,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929051666,4,下单请求,401,,线程组 1-445,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929051734,3,下单请求,401,,线程组 1-446,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929051793,3,下单请求,401,,线程组 1-447,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929051845,2,下单请求,401,,线程组 1-448,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929051917,2,下单请求,401,,线程组 1-449,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929051970,2,下单请求,401,,线程组 1-450,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052031,2,下单请求,401,,线程组 1-451,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052098,3,下单请求,401,,线程组 1-452,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929052155,2,下单请求,401,,线程组 1-453,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052206,2,下单请求,401,,线程组 1-454,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052273,2,下单请求,401,,线程组 1-455,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052327,2,下单请求,401,,线程组 1-456,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052388,4,下单请求,401,,线程组 1-457,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929052454,5,下单请求,401,,线程组 1-458,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929052503,2,下单请求,401,,线程组 1-459,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052564,2,下单请求,401,,线程组 1-460,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052636,4,下单请求,401,,线程组 1-461,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929052690,4,下单请求,401,,线程组 1-462,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929052752,4,下单请求,401,,线程组 1-463,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929052811,3,下单请求,401,,线程组 1-464,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929052878,4,下单请求,401,,线程组 1-465,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929052936,2,下单请求,401,,线程组 1-466,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929052990,3,下单请求,401,,线程组 1-467,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929053050,4,下单请求,401,,线程组 1-468,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929053110,2,下单请求,401,,线程组 1-469,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929053171,3,下单请求,401,,线程组 1-470,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929053234,3,下单请求,401,,线程组 1-471,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929053298,4,下单请求,401,,线程组 1-472,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929053345,3,下单请求,401,,线程组 1-473,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929053403,4,下单请求,401,,线程组 1-474,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929053463,2,下单请求,401,,线程组 1-475,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929053523,6,下单请求,401,,线程组 1-476,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929053583,2,下单请求,401,,线程组 1-477,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929053645,3,下单请求,401,,线程组 1-478,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929053705,3,下单请求,401,,线程组 1-479,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929053764,5,下单请求,401,,线程组 1-480,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929053824,4,下单请求,401,,线程组 1-481,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929053884,3,下单请求,401,,线程组 1-482,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929053943,2,下单请求,401,,线程组 1-483,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929054004,3,下单请求,401,,线程组 1-484,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929054063,5,下单请求,401,,线程组 1-485,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929054123,5,下单请求,401,,线程组 1-486,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929054183,5,下单请求,401,,线程组 1-487,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929054245,3,下单请求,401,,线程组 1-488,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929054303,3,下单请求,401,,线程组 1-489,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929054364,4,下单请求,401,,线程组 1-490,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929054421,3,下单请求,401,,线程组 1-491,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929054483,3,下单请求,401,,线程组 1-492,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929054545,4,下单请求,401,,线程组 1-493,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929054606,5,下单请求,401,,线程组 1-494,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929054664,4,下单请求,401,,线程组 1-495,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929054724,2,下单请求,401,,线程组 1-496,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929054784,5,下单请求,401,,线程组 1-497,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929054845,4,下单请求,401,,线程组 1-498,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929054903,3,下单请求,401,,线程组 1-499,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929054963,3,下单请求,401,,线程组 1-500,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929055024,4,下单请求,401,,线程组 1-501,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929055083,7,下单请求,401,,线程组 1-502,,false,,210,469,1,1,http://localhost:8080/user/order/submit,7,0,2
+1773929055143,6,下单请求,401,,线程组 1-503,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,2
+1773929055202,2,下单请求,401,,线程组 1-504,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929055265,2,下单请求,401,,线程组 1-505,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929055323,4,下单请求,401,,线程组 1-506,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929055383,4,下单请求,401,,线程组 1-507,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929055443,3,下单请求,401,,线程组 1-508,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929055502,3,下单请求,401,,线程组 1-509,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929055563,3,下单请求,401,,线程组 1-510,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929055622,2,下单请求,401,,线程组 1-511,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929055684,11,下单请求,401,,线程组 1-512,,false,,210,469,1,1,http://localhost:8080/user/order/submit,11,0,4
+1773929055742,4,下单请求,401,,线程组 1-513,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929055803,4,下单请求,401,,线程组 1-514,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,0
+1773929055865,2,下单请求,401,,线程组 1-515,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929055924,3,下单请求,401,,线程组 1-516,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929055982,2,下单请求,401,,线程组 1-517,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929056043,3,下单请求,401,,线程组 1-518,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929056102,3,下单请求,401,,线程组 1-519,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929056163,3,下单请求,401,,线程组 1-520,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929056224,4,下单请求,401,,线程组 1-521,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929056284,4,下单请求,401,,线程组 1-522,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929056345,4,下单请求,401,,线程组 1-523,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929056404,4,下单请求,401,,线程组 1-524,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929056465,2,下单请求,401,,线程组 1-525,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929056524,4,下单请求,401,,线程组 1-526,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929056584,2,下单请求,401,,线程组 1-527,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929056642,3,下单请求,401,,线程组 1-528,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929056703,3,下单请求,401,,线程组 1-529,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929056764,3,下单请求,401,,线程组 1-530,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929056824,4,下单请求,401,,线程组 1-531,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929056883,4,下单请求,401,,线程组 1-532,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929056943,5,下单请求,401,,线程组 1-533,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929057003,3,下单请求,401,,线程组 1-534,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057065,3,下单请求,401,,线程组 1-535,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057124,3,下单请求,401,,线程组 1-536,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057184,3,下单请求,401,,线程组 1-537,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929057244,5,下单请求,401,,线程组 1-538,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929057303,3,下单请求,401,,线程组 1-539,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057365,4,下单请求,401,,线程组 1-540,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929057422,3,下单请求,401,,线程组 1-541,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,0
+1773929057482,3,下单请求,401,,线程组 1-542,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057542,3,下单请求,401,,线程组 1-543,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057603,4,下单请求,401,,线程组 1-544,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929057663,4,下单请求,401,,线程组 1-545,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929057725,4,下单请求,401,,线程组 1-546,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929057783,5,下单请求,401,,线程组 1-547,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,1
+1773929057843,3,下单请求,401,,线程组 1-548,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929057902,1,下单请求,401,,线程组 1-549,,false,,210,469,1,1,http://localhost:8080/user/order/submit,1,0,0
+1773929057963,3,下单请求,401,,线程组 1-550,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929058023,5,下单请求,401,,线程组 1-551,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929058085,2,下单请求,401,,线程组 1-552,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929058145,3,下单请求,401,,线程组 1-553,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929058203,3,下单请求,401,,线程组 1-554,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929058263,4,下单请求,401,,线程组 1-555,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929058323,4,下单请求,401,,线程组 1-556,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929058383,4,下单请求,401,,线程组 1-557,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929058443,4,下单请求,401,,线程组 1-558,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929058503,2,下单请求,401,,线程组 1-559,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929058562,3,下单请求,401,,线程组 1-560,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929058624,3,下单请求,401,,线程组 1-561,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929058683,4,下单请求,401,,线程组 1-562,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929058745,5,下单请求,401,,线程组 1-563,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,2
+1773929058804,3,下单请求,401,,线程组 1-564,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929058863,2,下单请求,401,,线程组 1-565,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929058923,4,下单请求,401,,线程组 1-566,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929058983,2,下单请求,401,,线程组 1-567,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929059043,2,下单请求,401,,线程组 1-568,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929059106,2,下单请求,401,,线程组 1-569,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929059164,4,下单请求,401,,线程组 1-570,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929059223,3,下单请求,401,,线程组 1-571,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929059282,3,下单请求,401,,线程组 1-572,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929059343,2,下单请求,401,,线程组 1-573,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929059404,3,下单请求,401,,线程组 1-574,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929059463,4,下单请求,401,,线程组 1-575,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929059524,2,下单请求,401,,线程组 1-576,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929059584,4,下单请求,401,,线程组 1-577,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929059641,3,下单请求,401,,线程组 1-578,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929059702,2,下单请求,401,,线程组 1-579,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929059763,2,下单请求,401,,线程组 1-580,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929059822,3,下单请求,401,,线程组 1-581,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929059883,3,下单请求,401,,线程组 1-582,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929059943,4,下单请求,401,,线程组 1-583,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929060002,3,下单请求,401,,线程组 1-584,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929060063,2,下单请求,401,,线程组 1-585,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929060123,4,下单请求,401,,线程组 1-586,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929060184,4,下单请求,401,,线程组 1-587,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929060244,3,下单请求,401,,线程组 1-588,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929060302,2,下单请求,401,,线程组 1-589,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,0
+1773929060361,3,下单请求,401,,线程组 1-590,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929060422,2,下单请求,401,,线程组 1-591,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929060483,4,下单请求,401,,线程组 1-592,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,1
+1773929060542,2,下单请求,401,,线程组 1-593,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929060610,2,下单请求,401,,线程组 1-594,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929060669,11,下单请求,401,,线程组 1-595,,false,,210,469,1,1,http://localhost:8080/user/order/submit,11,0,10
+1773929060730,3,下单请求,401,,线程组 1-596,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929060782,2,下单请求,401,,线程组 1-597,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929060846,4,下单请求,401,,线程组 1-598,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929060908,4,下单请求,401,,线程组 1-599,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,3
+1773929060964,3,下单请求,401,,线程组 1-600,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929061023,3,下单请求,401,,线程组 1-601,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929061082,4,下单请求,401,,线程组 1-602,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,3
+1773929061143,3,下单请求,401,,线程组 1-603,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929061203,6,下单请求,401,,线程组 1-604,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929061265,4,下单请求,401,,线程组 1-605,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929061323,2,下单请求,401,,线程组 1-606,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929061382,3,下单请求,401,,线程组 1-607,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929061453,2,下单请求,401,,线程组 1-608,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929061509,3,下单请求,401,,线程组 1-609,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929061568,3,下单请求,401,,线程组 1-610,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929061630,4,下单请求,401,,线程组 1-611,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929061697,3,下单请求,401,,线程组 1-612,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929061753,5,下单请求,401,,线程组 1-613,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929061811,2,下单请求,401,,线程组 1-614,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929061867,2,下单请求,401,,线程组 1-615,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929061930,3,下单请求,401,,线程组 1-616,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929061998,2,下单请求,401,,线程组 1-617,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929062052,3,下单请求,401,,线程组 1-618,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,2
+1773929062105,5,下单请求,401,,线程组 1-619,,false,,210,469,1,1,http://localhost:8080/user/order/submit,5,0,3
+1773929062169,2,下单请求,401,,线程组 1-620,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929062232,4,下单请求,401,,线程组 1-621,,false,,210,469,1,1,http://localhost:8080/user/order/submit,4,0,2
+1773929062291,3,下单请求,401,,线程组 1-622,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929062347,3,下单请求,401,,线程组 1-623,,false,,210,469,1,1,http://localhost:8080/user/order/submit,3,0,1
+1773929062411,6,下单请求,401,,线程组 1-624,,false,,210,469,1,1,http://localhost:8080/user/order/submit,6,0,3
+1773929062474,2,下单请求,401,,线程组 1-625,,false,,210,469,1,1,http://localhost:8080/user/order/submit,2,0,1
+1773929062529,3,下单请求,Non HTTP response code: org.apache.http.NoHttpResponseException,Non HTTP response message: localhost:8080 failed to respond,线程组 1-626,text,false,,2091,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929062587,314,下单请求,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,线程组 1-627,text,false,,2496,0,6,6,http://localhost:8080/user/order/submit,0,0,1
+1773929062826,76,下单请求,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,线程组 1-631,text,false,,2496,0,6,6,http://localhost:8080/user/order/submit,0,0,2
+1773929062646,256,下单请求,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,线程组 1-628,text,false,,2496,0,5,5,http://localhost:8080/user/order/submit,0,0,1
+1773929062768,134,下单请求,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,线程组 1-630,text,false,,2496,0,5,5,http://localhost:8080/user/order/submit,0,0,2
+1773929062705,196,下单请求,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,线程组 1-629,text,false,,2496,0,4,4,http://localhost:8080/user/order/submit,0,0,1
+1773929062890,12,下单请求,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,线程组 1-632,text,false,,2496,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929062949,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-633,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929063012,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-634,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063073,19,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-635,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,18
+1773929063135,9,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-636,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,9
+1773929063184,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-637,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063252,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-638,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929063314,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-639,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063365,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-640,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929063425,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-641,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929063484,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-642,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063549,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-643,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063611,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-644,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929063663,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-645,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929063729,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-646,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929063796,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-647,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929063853,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-648,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063913,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-649,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929063961,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-650,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929064034,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-651,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929064094,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-652,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929064144,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-653,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929064203,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-654,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929064274,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-655,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929064330,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-656,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929064389,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-657,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929064454,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-658,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929064515,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-659,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929064565,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-660,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929064634,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-661,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929064691,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-662,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929064744,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-663,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929064813,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-664,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929064875,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-665,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929064930,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-666,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929064990,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-667,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929065059,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-668,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929065107,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-669,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065165,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-670,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929065233,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-671,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065286,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-672,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929065356,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-673,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065404,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-674,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065465,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-675,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065535,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-676,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065598,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-677,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929065657,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-678,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929065709,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-679,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065779,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-680,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929065829,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-681,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929065891,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-682,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929065950,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-683,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929066012,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-684,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066066,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-685,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066123,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-686,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929066184,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-687,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,5
+1773929066243,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-688,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066306,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-689,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066367,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-690,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066425,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-691,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066495,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-692,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066545,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-693,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066611,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-694,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929066665,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-695,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066735,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-696,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066792,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-697,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066847,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-698,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066912,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-699,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929066965,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-700,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067038,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-701,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067088,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-702,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067151,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-703,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067209,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-704,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067264,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-705,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067335,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-706,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067385,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-707,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067452,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-708,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067504,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-709,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067577,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-710,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067633,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-711,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067682,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-712,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067744,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-713,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067811,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-714,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929067864,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-715,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067929,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-716,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929067989,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-717,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929068045,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-718,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929068108,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-719,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929068162,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-720,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929068229,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-721,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929068292,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-722,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929068344,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-723,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929068411,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-724,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929068465,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-725,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929068534,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-726,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929068592,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-727,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929068659,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-728,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929068708,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-729,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929068767,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-730,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929068822,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-731,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929068887,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-732,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929068945,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-733,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929069013,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-734,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929069064,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-735,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929069125,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-736,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929069189,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-737,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,5
+1773929069249,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-738,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929069315,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-739,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929069367,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-740,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929069424,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-741,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929069497,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-742,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929069554,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-743,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929069610,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-744,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929069665,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-745,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929069724,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-746,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929069785,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-747,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929069853,6,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-748,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,6
+1773929069914,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-749,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,5
+1773929069974,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-750,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929070024,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-751,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929070096,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-752,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070149,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-753,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929070211,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-754,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070277,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-755,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070335,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-756,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070385,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-757,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070448,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-758,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070506,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-759,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929070576,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-760,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929070630,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-761,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929070694,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-762,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070749,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-763,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929070810,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-764,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070865,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-765,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929070928,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-766,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929070990,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-767,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071046,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-768,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071105,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-769,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929071166,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-770,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929071225,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-771,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929071292,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-772,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929071342,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-773,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929071403,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-774,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929071469,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-775,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071528,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-776,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071588,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-777,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071655,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-778,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071714,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-779,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071766,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-780,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929071824,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-781,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929071891,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-782,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929071947,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-783,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072008,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-784,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072063,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-785,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072123,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-786,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072197,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-787,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072242,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-788,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072311,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-789,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072376,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-790,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072423,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-791,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072487,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-792,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072554,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-793,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072609,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-794,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929072673,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-795,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072724,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-796,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072784,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-797,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929072851,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-798,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929072909,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-799,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929072976,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-800,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073027,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-801,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929073087,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-802,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929073154,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-803,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929073210,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-804,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929073267,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-805,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073334,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-806,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073384,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-807,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073445,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-808,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929073510,5,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-809,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,5
+1773929073566,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-810,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073631,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-811,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929073688,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-812,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073748,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-813,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073815,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-814,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073864,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-815,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929073933,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-816,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074000,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-817,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074054,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-818,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929074105,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-819,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074167,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-820,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074236,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-821,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929074299,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-822,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929074350,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-823,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929074420,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-824,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929074471,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-825,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074526,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-826,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929074596,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-827,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929074646,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-828,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929074711,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-829,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074773,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-830,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929074834,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-831,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929074889,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-832,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929074949,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-833,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929075009,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-834,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929075070,6,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-835,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,6
+1773929075136,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-836,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929075190,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-837,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929075248,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-838,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929075317,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-839,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929075373,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-840,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929075431,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-841,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929075485,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-842,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929075553,7,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-843,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,7
+1773929075614,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-844,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929075670,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-845,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929075729,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-846,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929075792,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-847,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929075847,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-848,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929075905,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-849,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929075976,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-850,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076027,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-851,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076085,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-852,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076147,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-853,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929076219,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-854,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076273,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-855,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076330,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-856,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076383,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-857,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076444,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-858,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076505,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-859,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076578,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-860,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076623,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-861,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076691,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-862,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076745,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-863,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076808,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-864,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076868,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-865,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929076933,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-866,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929076993,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-867,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929077045,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-868,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929077111,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-869,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929077166,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-870,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077232,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-871,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929077288,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-872,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929077348,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-873,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077405,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-874,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929077476,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-875,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077532,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-876,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077584,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-877,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077654,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-878,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929077712,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-879,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077771,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-880,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077831,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-881,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077899,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-882,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929077944,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-883,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929078002,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-884,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929078076,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-885,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929078127,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-886,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929078193,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-887,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929078244,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-888,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078306,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-889,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078375,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-890,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929078436,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-891,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078494,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-892,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078550,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-893,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929078609,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-894,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929078670,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-895,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078727,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-896,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929078795,8,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-897,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,8
+1773929078857,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-898,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078914,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-899,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929078965,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-900,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929079037,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-901,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929079090,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-902,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929079147,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-903,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929079207,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-904,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929079268,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-905,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929079332,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-906,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929079391,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-907,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929079449,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-908,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929079505,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-909,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929079564,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-910,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929079625,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-911,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929079693,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-912,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929079747,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-913,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929079811,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-914,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929079868,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-915,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929079934,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-916,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929079995,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-917,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080052,4,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-918,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,4
+1773929080111,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-919,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929080166,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-920,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080227,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-921,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929080293,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-922,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080357,3,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-923,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,3
+1773929080406,6,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-924,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,6
+1773929080477,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-925,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929080531,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-926,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080592,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-927,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080649,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-928,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080703,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-929,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929080764,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-930,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080827,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-931,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929080896,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-932,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929080953,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-933,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081013,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-934,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929081073,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-935,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081136,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-936,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081189,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-937,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081243,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-938,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081306,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-939,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081371,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-940,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081432,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-941,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081486,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-942,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081550,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-943,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081603,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-944,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081679,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-945,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081726,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-946,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081782,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-947,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929081856,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-948,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929081910,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-949,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929081973,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-950,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082026,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-951,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082086,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-952,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082158,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-953,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929082207,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-954,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082267,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-955,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082328,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-956,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082385,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-957,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082448,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-958,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082513,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-959,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082566,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-960,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929082625,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-961,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082686,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-962,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082754,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-963,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929082814,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-964,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082867,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-965,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082926,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-966,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929082983,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-967,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083044,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-968,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083105,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-969,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929083168,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-970,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083223,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-971,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929083286,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-972,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083355,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-973,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083417,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-974,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083467,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-975,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929083529,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-976,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083596,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-977,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929083645,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-978,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083708,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-979,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083763,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-980,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083824,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-981,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929083882,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-982,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929083945,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-983,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084003,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-984,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084062,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-985,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084123,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-986,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084183,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-987,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084243,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-988,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084304,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-989,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084363,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-990,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084423,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-991,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084483,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-992,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084545,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-993,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084606,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-994,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084663,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-995,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084722,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-996,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084782,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-997,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084843,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-998,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2
+1773929084904,1,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-999,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,1
+1773929084962,2,下单请求,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",线程组 1-1000,text,false,,2825,0,1,1,http://localhost:8080/user/order/submit,0,0,2

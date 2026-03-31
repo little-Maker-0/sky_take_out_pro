@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="MySQL高并发性能测试" enabled="true">
+      <stringProp name="TestPlan.comments">测试高并发下MySQL数据库的性能，包括查询、插入、更新和删除操作</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="dbUrl" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbUrl</stringProp>
+            <stringProp name="Argument.value">jdbc:mysql://localhost:3306/sky_take_out?useSSL=false&amp;serverTimezone=Asia/Shanghai</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dbUser" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbUser</stringProp>
+            <stringProp name="Argument.value">root</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dbPassword" elementType="HTTPArgument">
+            <stringProp name="Argument.name">dbPassword</stringProp>
+            <stringProp name="Argument.value">smx</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="threadCount" elementType="HTTPArgument">
+            <stringProp name="Argument.name">threadCount</stringProp>
+            <stringProp name="Argument.value">1000</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="rampUpTime" elementType="HTTPArgument">
+            <stringProp name="Argument.name">rampUpTime</stringProp>
+            <stringProp name="Argument.value">60</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="loopCount" elementType="HTTPArgument">
+            <stringProp name="Argument.name">loopCount</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <boolProp name="Argument.always_encode">false</boolProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">E:\project\sky-take-out-main\mysql-connector-java-8.0.30.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="高并发线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${loopCount}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${threadCount}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${rampUpTime}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="JDBCDataSourceGui" testclass="ConfigTestElement" testname="JDBC连接配置" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="poolMax>0">200</stringProp>
+          <stringProp name="timeout>0">30000</stringProp>
+          <stringProp name="statementCacheSize>0">200</stringProp>
+          <stringProp name="driver">com.mysql.cj.jdbc.Driver</stringProp>
+          <stringProp name="url">${dbUrl}</stringProp>
+          <stringProp name="username">${dbUser}</stringProp>
+          <stringProp name="password">${dbPassword}</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="JDBCSampler" testname="查询用户信息" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT * FROM user WHERE id = ${__Random(1, 100)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="JDBCSampler" testname="查询订单信息" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT * FROM orders WHERE id = ${__Random(1, 1000)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="JDBCSampler" testname="查询菜品信息" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT * FROM dish WHERE id = ${__Random(1, 500)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="JDBCSampler" testname="插入购物车记录" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">INSERT INTO shopping_cart (user_id, dish_id, setmeal_id, dish_flavor, number, amount, create_time) VALUES (${__Random(1, 100)}, ${__Random(1, 500)}, NULL, '微辣', 1, 25.5, NOW())</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="JDBCSampler" testname="更新订单状态" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">UPDATE orders SET status = 2 WHERE id = ${__Random(1, 1000)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="JDBCSamplerGui" testclass="JDBCSampler" testname="删除购物车记录" enabled="true">
+          <stringProp name="dataSource">mysql</stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="query">DELETE FROM shopping_cart WHERE id = ${__Random(1, 1000)}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="queryTimeout">0</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <ViewResultsTree guiclass="ViewResultsTree" testclass="org.apache.jmeter.visualizers.ViewResultsTree" testname="查看结果树" enabled="true">
+          <boolProp name="ViewResultsTree.showMetadata">true</boolProp>
+          <boolProp name="ViewResultsTree.showSamplerProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showAssertions">true</boolProp>
+          <boolProp name="ViewResultsTree.showAssertionResults">true</boolProp>
+          <boolProp name="ViewResultsTree.showScript">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseData">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showRequestHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showRequest">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponse">true</boolProp>
+          <boolProp name="ViewResultsTree.showEmptyResponse">true</boolProp>
+          <boolProp name="ViewResultsTree.showBinaryResponse">true</boolProp>
+          <boolProp name="ViewResultsTree.showXML">true</boolProp>
+          <boolProp name="ViewResultsTree.showHTML">true</boolProp>
+          <boolProp name="ViewResultsTree.showJSON">true</boolProp>
+          <boolProp name="ViewResultsTree.showText">true</boolProp>
+          <boolProp name="ViewResultsTree.showJMeterProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showSystemProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showVariables">true</boolProp>
+          <boolProp name="ViewResultsTree.showOnlyFailures">false</boolProp>
+          <boolProp name="ViewResultsTree.showSuccessfulResponses">true</boolProp>
+          <boolProp name="ViewResultsTree.showUnsuccessfulResponses">true</boolProp>
+          <boolProp name="ViewResultsTree.showTiming">true</boolProp>
+          <boolProp name="ViewResultsTree.showSubresults">true</boolProp>
+          <boolProp name="ViewResultsTree.showParent">true</boolProp>
+          <boolProp name="ViewResultsTree.showIcon">true</boolProp>
+          <boolProp name="ViewResultsTree.showTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showCode">true</boolProp>
+          <boolProp name="ViewResultsTree.showMessage">true</boolProp>
+          <boolProp name="ViewResultsTree.showThreadName">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleCount">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleStartTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleEndTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showLatency">true</boolProp>
+          <boolProp name="ViewResultsTree.showConnectTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showIdleTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showBandwidth">true</boolProp>
+          <boolProp name="ViewResultsTree.showSentBytes">true</boolProp>
+          <boolProp name="ViewResultsTree.showReceivedBytes">true</boolProp>
+          <boolProp name="ViewResultsTree.showDataEncoding">true</boolProp>
+          <boolProp name="ViewResultsTree.showDataType">true</boolProp>
+          <boolProp name="ViewResultsTree.showURL">true</boolProp>
+          <boolProp name="ViewResultsTree.showCookies">true</boolProp>
+          <boolProp name="ViewResultsTree.showCache">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseXML">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponsePDF">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseCSV">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseHTML">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseText">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseJSON">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseBinary">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveRequest">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveResponseHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveRequestHeaders">true</boolProp>
+          <boolProp name="ViewResultsTree.showSaveAs">true</boolProp>
+          <boolProp name="ViewResultsTree.showRemove">true</boolProp>
+          <boolProp name="ViewResultsTree.showReload">true</boolProp>
+          <boolProp name="ViewResultsTree.showClear">true</boolProp>
+          <boolProp name="ViewResultsTree.showHelp">true</boolProp>
+          <boolProp name="ViewResultsTree.showSearch">true</boolProp>
+          <boolProp name="ViewResultsTree.showHighlight">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseTimeGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showAggregateReport">true</boolProp>
+          <boolProp name="ViewResultsTree.showGraphResults">true</boolProp>
+          <boolProp name="ViewResultsTree.showSimpleTable">true</boolProp>
+          <boolProp name="ViewResultsTree.showDistributionGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showThroughputGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showLatencyGraph">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseCodes">true</boolProp>
+          <boolProp name="ViewResultsTree.showResponseTimes">true</boolProp>
+          <boolProp name="ViewResultsTree.showBytes">true</boolProp>
+          <boolProp name="ViewResultsTree.showSampleCount">true</boolProp>
+          <boolProp name="ViewResultsTree.showThreadCounts">true</boolProp>
+          <boolProp name="ViewResultsTree.showURLs">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileNames">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileSizes">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileTypes">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileContents">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileProperties">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileCreationTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileLastModifiedTime">true</boolProp>
+          <boolProp name="ViewResultsTree.showFilePermissions">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileOwner">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileGroup">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileInode">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileDevice">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileLinks">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileBlocks">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileBlockSize">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileIOBlocks">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileIOBlockSize">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileDirectory">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileSymlink">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileHardlink">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileSocket">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileFifo">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileCharDevice">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileBlockDevice">true</boolProp>
+          <boolProp name="ViewResultsTree.showFileUnknown">true</boolProp>
+        </ViewResultsTree>
+        <hashTree/>
+        <AggregateReport guiclass="AggregateReportGui" testclass="org.apache.jmeter.reporters.AggregateReport" testname="聚合报告" enabled="true">
+          <boolProp name="AggregateReport.showLabel">true</boolProp>
+          <boolProp name="AggregateReport.showSamples">true</boolProp>
+          <boolProp name="AggregateReport.showAverage">true</boolProp>
+          <boolProp name="AggregateReport.showMedian">true</boolProp>
+          <boolProp name="AggregateReport.show90%Line">true</boolProp>
+          <boolProp name="AggregateReport.show95%Line">true</boolProp>
+          <boolProp name="AggregateReport.show99%Line">true</boolProp>
+          <boolProp name="AggregateReport.showMin">true</boolProp>
+          <boolProp name="AggregateReport.showMax">true</boolProp>
+          <boolProp name="AggregateReport.showError">true</boolProp>
+          <boolProp name="AggregateReport.showThroughput">true</boolProp>
+          <boolProp name="AggregateReport.showReceivedKBytesPerSec">true</boolProp>
+          <boolProp name="AggregateReport.showSentKBytesPerSec">true</boolProp>
+          <boolProp name="AggregateReport.includeSubResults">true</boolProp>
+        </AggregateReport>
+        <hashTree/>
+        <GraphResults guiclass="GraphVisualizer" testclass="org.apache.jmeter.visualizers.GraphResults" testname="图表结果" enabled="true">
+          <boolProp name="GraphVisualizer.showSampleCount">true</boolProp>
+          <boolProp name="GraphVisualizer.showAverage">true</boolProp>
+          <boolProp name="GraphVisualizer.showMedian">true</boolProp>
+          <boolProp name="GraphVisualizer.show90Line">true</boolProp>
+          <boolProp name="GraphVisualizer.show95Line">true</boolProp>
+          <boolProp name="GraphVisualizer.show99Line">true</boolProp>
+          <boolProp name="GraphVisualizer.showMin">true</boolProp>
+          <boolProp name="GraphVisualizer.showMax">true</boolProp>
+          <boolProp name="GraphVisualizer.showError">true</boolProp>
+          <boolProp name="GraphVisualizer.showThroughput">true</boolProp>
+          <boolProp name="GraphVisualizer.showKBytesPerSec">true</boolProp>
+          <boolProp name="GraphVisualizer.showConnectTime">true</boolProp>
+          <boolProp name="GraphVisualizer.showLatency">true</boolProp>
+          <boolProp name="GraphVisualizer.showIdleTime">true</boolProp>
+          <boolProp name="GraphVisualizer.granularity">60000</boolProp>
+        </GraphResults>
+        <hashTree/>
+        <SimpleDataWriter guiclass="SimpleDataWriter" testclass="org.apache.jmeter.reporters.SimpleDataWriter" testname="保存测试结果" enabled="true">
+          <stringProp name="filename">mysql-performance-test-results.csv</stringProp>
+          <boolProp name="append">false</boolProp>
+          <boolProp name="onlySuccesses">false</boolProp>
+          <boolProp name="bytes">false</boolProp>
+          <boolProp name="annotate">false</boolProp>
+        </SimpleDataWriter>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
