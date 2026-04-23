@@ -16,10 +16,14 @@ import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealDishMapper;
 import com.sky.mapper.SetmealMapper;
 import com.sky.result.PageResult;
+import com.sky.event.DishCacheInvalidateEvent;
 import com.sky.service.DishService;
+import com.sky.utils.RedisBloomFilter;
 import com.sky.vo.DishVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,6 +44,12 @@ public class DishServiceImpl implements DishService {
 
     @Autowired
     private SetmealMapper setmealMapper;
+
+    @Autowired
+    private ApplicationEventPublisher applicationEventPublisher;
+
+    @Autowired
+    private RedisBloomFilter redisBloomFilter;
 
     /**
      * 新增菜品
@@ -64,7 +74,11 @@ public class DishServiceImpl implements DishService {
 //            向口味表插入n条数据
             dishFlavorMapper.insertBatch(flavors);
         }
-        
+
+        applicationEventPublisher.publishEvent(
+                DishCacheInvalidateEvent.categoryList(dishDTO.getCategoryId()));
+
+        redisBloomFilter.add("dish", String.valueOf(dishId));
         return dishId;
     }
 
@@ -111,6 +125,7 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.deleteByDishId(id);
         });
 
+        applicationEventPublisher.publishEvent(DishCacheInvalidateEvent.allFromDeleteBatch());
     }
 
     /**
@@ -119,6 +134,7 @@ public class DishServiceImpl implements DishService {
      * @return
      */
     @Override
+    @Cacheable(cacheNames = "dishDetailCache", key = "#id")
     public DishVO getByIdWithFlavor(Long id) {
 //        根据id查询菜品数据
         Dish dish = dishMapper.getById(id);
@@ -144,6 +160,7 @@ public class DishServiceImpl implements DishService {
      * @param dishDTO
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void updateWithFlavor(DishDTO dishDTO) {
         Dish dish = new Dish();
         BeanUtils.copyProperties(dishDTO, dish);
@@ -163,6 +180,7 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.insertBatch(flavors);
         }
 
+        applicationEventPublisher.publishEvent(DishCacheInvalidateEvent.all());
     }
 
     /**
@@ -171,6 +189,7 @@ public class DishServiceImpl implements DishService {
      * @return
      */
     @Override
+    @Cacheable(cacheNames = "dishListCache", key = "#categoryId")
     public List<Dish> list(Long categoryId) {
         Dish dish = Dish.builder()
                 .categoryId(categoryId)
@@ -185,6 +204,9 @@ public class DishServiceImpl implements DishService {
      * @return
      */
     @Override
+    @Cacheable(
+            cacheNames = "dishListCache",
+            key = "#dish.categoryId + '-' + (T(java.util.Objects).toString(#dish.status))")
     public List<DishVO> listWithFlavor(Dish dish) {
         List<Dish> dishList = dishMapper.list(dish);
 
@@ -234,6 +256,8 @@ public class DishServiceImpl implements DishService {
                 }
             }
         }
+
+        applicationEventPublisher.publishEvent(DishCacheInvalidateEvent.all());
     }
 
 }

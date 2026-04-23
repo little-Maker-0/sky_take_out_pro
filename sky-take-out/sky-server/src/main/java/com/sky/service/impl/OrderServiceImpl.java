@@ -88,8 +88,7 @@ public class OrderServiceImpl implements OrderService {
             throw new OrderBusinessException("订单正在处理中，请勿重复提交");
         }
 
-        LockRenewalThread renewalThread = new LockRenewalThread
-                (redisLockUtil, lockKey, lockValue, 10);
+        LockRenewalThread renewalThread = new LockRenewalThread(redisLockUtil, lockKey, lockValue, 10);
         renewalThread.start();
 
         try {
@@ -204,8 +203,7 @@ public class OrderServiceImpl implements OrderService {
             return;
         }
 
-        LockRenewalThread renewalThread = new LockRenewalThread
-                (redisLockUtil, lockKey, lockValue, 10);
+        LockRenewalThread renewalThread = new LockRenewalThread(redisLockUtil, lockKey, lockValue, 10);
         renewalThread.start();
 
         try {
@@ -233,7 +231,7 @@ public class OrderServiceImpl implements OrderService {
             map.put("orderId", orders.getId());
             map.put("content", "订单号：" + outTradeNo);
 
-            webSocketServer.sendToAllClient(JSON.toJSONString(map));
+            webSocketServer.sendToMerchants(JSON.toJSONString(map));
         } finally {
             renewalThread.stopRenewal();
             redisLockUtil.unlock(lockKey, lockValue);
@@ -548,12 +546,16 @@ public class OrderServiceImpl implements OrderService {
             throw new OrderBusinessException(MessageConstant.ORDER_NOT_FOUND);
         }
 
+        if (orders.getStatus() == Orders.PENDING_PAYMENT) {
+            throw new OrderBusinessException(MessageConstant.ORDER_STATUS_ERROR);
+        }
+
 //        基于WebSocket实现催单
         HashMap map = new HashMap();
         map.put("type", 2);
         map.put("orderId", id);
         map.put("content", "订单号：" + orders.getNumber());
-        webSocketServer.sendToAllClient(JSON.toJSONString(map));
+        webSocketServer.sendToMerchants(JSON.toJSONString(map));
     }
 
     /**

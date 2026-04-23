@@ -8,7 +8,7 @@
     "urlCheck": false,
     "minified": true,
     "coverView": true,
-    "es6": true,
+    "es6": false,
     "postcss": true,
     "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
@@ -30,7 +30,7 @@
       "outputPath": ""
     },
     "useStaticServer": false,
-    "showES6CompileOption": true,
+    "showES6CompileOption": false,
     "useCompilerPlugins": false,
     "minifyWXML": true,
     "condition": false

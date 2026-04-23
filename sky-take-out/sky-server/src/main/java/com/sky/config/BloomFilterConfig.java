@@ -31,10 +31,10 @@ public class BloomFilterConfig {
             log.info("开始初始化布隆过滤器...");
             
             // 初始化菜品ID布隆过滤器
-            redisBloomFilter.initBloomFilter("dish", 100000, 0.01);
+            redisBloomFilter.initBloomFilter("dish", 200, 0.01);
             
             // 初始化分类ID布隆过滤器
-            redisBloomFilter.initBloomFilter("category", 1000, 0.01);
+            redisBloomFilter.initBloomFilter("category", 20, 0.01);
             
             // 加载现有菜品ID到布隆过滤器
             try {

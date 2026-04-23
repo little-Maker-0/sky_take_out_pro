@@ -1,0 +1,52 @@
+<view class="container">
+  <view class="section">
+    <text class="section-title">菜品列表缓存测试</text>
+    <view class="category-list">
+      <button 
+        wx:for="{{categories}}" 
+        wx:key="id"
+        class="category-btn"
+        bindtap="testDishListCache"
+        data-category-id="{{item.id}}"
+      >
+        {{item.name}}
+      </button>
+    </view>
+    <view class="result" wx:if="{{dishListResult}}">
+      <text>测试结果: {{dishListResult}}</text>
+      <text>响应时间: {{dishListTime}}ms</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">菜品详情缓存测试</text>
+    <input 
+      class="dish-id-input"
+      placeholder="请输入菜品ID"
+      value="{{dishId}}"
+      bindinput="onDishIdInput"
+    />
+    <button class="test-btn" bindtap="testDishDetailCache">测试详情缓存</button>
+    <view class="result" wx:if="{{dishDetailResult}}">
+      <text>测试结果: {{dishDetailResult}}</text>
+      <text>响应时间: {{dishDetailTime}}ms</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">购物车缓存测试</text>
+    <button class="test-btn" bindtap="testShoppingCartCache">测试购物车缓存</button>
+    <view class="result" wx:if="{{cartResult}}">
+      <text>测试结果: {{cartResult}}</text>
+      <text>购物车商品数量: {{cartCount}}</text>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">缓存清理测试</text>
+    <button class="test-btn" bindtap="clearCache">清理缓存</button>
+    <view class="result" wx:if="{{clearCacheResult}}">
+      <text>清理结果: {{clearCacheResult}}</text>
+    </view>
+  </view>
+</view>

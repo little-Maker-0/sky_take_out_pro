@@ -13,19 +13,12 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import org.springframework.data.redis.core.Cursor;
-import org.springframework.data.redis.core.ScanOptions;
 
 /**
- * 菜品管理
+ * 菜品管理（缓存失效在 {@link com.sky.service.impl.DishServiceImpl} 事务提交后触发）
  */
 @RestController
 @RequestMapping("/admin/dish")
@@ -37,13 +30,7 @@ public class DishController {
     private DishService dishService;
 
     @Autowired
-    private RedisTemplate redisTemplate;
-    
-    @Autowired
     private RedisBloomFilter redisBloomFilter;
-    
-    // 异步处理线程池
-    private final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
     /**
      * 新增菜品
@@ -56,11 +43,6 @@ public class DishController {
         log.info("新增菜品：{}", dishDTO);
         Long dishId = dishService.saveWithFlavor(dishDTO);
 
-//        清理缓存数据
-        String key = "dish_" + dishDTO.getCategoryId();
-        asyncClearCache(key);
-        
-//        将新菜品ID添加到布隆过滤器
         redisBloomFilter.add("dish", dishId.toString());
 
         return Result.success();
@@ -75,7 +57,7 @@ public class DishController {
     @ApiOperation("菜品分页查询")
     public Result<PageResult> page(DishPageQueryDTO dishPageQueryDTO) {
         log.info("菜品分页查询:{}", dishPageQueryDTO);
-        PageResult pageResult = dishService.pageQuery(dishPageQueryDTO);//后绪步骤定义
+        PageResult pageResult = dishService.pageQuery(dishPageQueryDTO);
         return Result.success(pageResult);
     }
 
@@ -91,8 +73,6 @@ public class DishController {
         log.info("菜品批量删除：{}", ids);
         dishService.deleteBatch(ids);
 
-//        将所有的菜品缓存数据清理掉，所有以dish_开头的key
-        clearCache("dish_*");
         return Result.success();
     }
 
@@ -122,9 +102,6 @@ public class DishController {
         log.info("修改菜品：{}", dishDTO);
         dishService.updateWithFlavor(dishDTO);
 
-        //将所有的菜品缓存数据清理掉，所有以dish_开头的key
-        asyncClearCache("dish_*");
-
         return Result.success();
     }
 
@@ -152,60 +129,7 @@ public class DishController {
     public Result<String> startOrStop(@PathVariable Integer status, Long id) {
         dishService.startOrStop(status, id);
 
-        //将所有的菜品缓存数据清理掉，所有以dish_开头的key
-        asyncClearCache("dish_*");
-
         return Result.success();
-    }
-
-    /**
-     * 清理缓存数据
-     * @param pattern
-     */
-    private void clearCache(String pattern) {
-        try {
-            // 使用SCAN命令替代KEYS命令，避免阻塞Redis
-            Set<String> keys = new HashSet<>();
-            Cursor<String> cursor = redisTemplate.scan(
-                ScanOptions.scanOptions()
-                    .match(pattern)
-                    .count(100)
-                    .build()
-            );
-            
-            while (cursor.hasNext()) {
-                keys.add(cursor.next());
-                // 每收集1000个键就删除一次
-                if (keys.size() >= 1000) {
-                    redisTemplate.delete(keys);
-                    keys.clear();
-                }
-            }
-            
-            // 删除剩余的键
-            if (!keys.isEmpty()) {
-                redisTemplate.delete(keys);
-            }
-            log.info("缓存清理完成，模式：{}", pattern);
-        } catch (Exception e) {
-            log.error("清理缓存失败: {}", pattern, e);
-        }
-    }
-    
-    /**
-     * 异步清理缓存数据
-     * @param pattern
-     */
-    private void asyncClearCache(String pattern) {
-        executorService.execute(() -> {
-            try {
-                // 延迟100ms执行，确保数据库事务已提交
-                Thread.sleep(100);
-                clearCache(pattern);
-            } catch (Exception e) {
-                log.error("异步清理缓存失败: {}", pattern, e);
-            }
-        });
     }
 
 }

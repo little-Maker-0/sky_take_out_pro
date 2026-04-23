@@ -17,6 +17,7 @@ public class RedisLockUtil {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
+    //默认加锁时间30秒
     private static final long DEFAULT_EXPIRE_TIME = 30;
 
     private static final String LOCK_PREFIX = "lock:";

@@ -1,8 +1,4 @@
 {
-  "navigationStyle": "custom",
   "navigationBarTitleText": "苍穹外卖",
-  "usingComponents": {
-    "nav-bar": "/pages/common/Navbar/navbar",
-    "phone": "/components/uni-phone/index"
-  }
+  "usingComponents": {}
 }

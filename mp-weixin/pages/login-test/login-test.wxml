@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="login-section">
+    <text class="section-title">登录测试</text>
+    <button class="login-btn" bindtap="testLogin">测试登录</button>
+    <button class="clear-btn" bindtap="clearLogin">清除登录状态</button>
+  </view>
+  
+  <view class="result-section" wx:if="{{loginResult}}">
+    <text class="result-title">登录结果</text>
+    <text class="result-text">{{loginResult}}</text>
+  </view>
+  
+  <view class="info-section">
+    <text class="info-title">用户信息</text>
+    <text class="info-text">昵称: {{userInfo.nickName || '未登录'}}</text>
+    <text class="info-text">性别: {{userInfo.gender || '未登录'}}</text>
+    <text class="info-text">头像: {{userInfo.avatarUrl ? '已设置' : '未设置'}}</text>
+  </view>
+</view>

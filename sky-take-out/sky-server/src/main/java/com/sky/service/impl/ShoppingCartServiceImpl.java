@@ -3,25 +3,27 @@ package com.sky.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.sky.context.BaseContext;
 import com.sky.dto.ShoppingCartDTO;
-import com.sky.entity.Dish;
 import com.sky.entity.Setmeal;
 import com.sky.entity.ShoppingCart;
-import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealMapper;
 import com.sky.mapper.ShoppingCartMapper;
+import com.sky.service.DishService;
 import com.sky.service.ShoppingCartService;
+import com.sky.vo.DishVO;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Service
@@ -31,7 +33,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     private ShoppingCartMapper shoppingCartMapper;
 
     @Autowired
-    private DishMapper dishMapper;
+    private DishService dishService;
 
     @Autowired
     private SetmealMapper setmealMapper;
@@ -39,13 +41,15 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     @Autowired
     private RedisTemplate redisTemplate;
 
-    private static final String SHOPPING_CART_KEY_PREFIX = "shopping_cart:";
+    private static final String SHOPPING_CART_KEY_PREFIX = "shopping_cart::";
+    private static final int CART_TTL = 10;
 
     /**
      * 添加购物车
      * @param shoppingCartDTO
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void addShoppingCart(ShoppingCartDTO shoppingCartDTO) {
         Long userId = BaseContext.getUserId();
         String cartKey = SHOPPING_CART_KEY_PREFIX + userId;
@@ -53,9 +57,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         // 生成商品Field
         String field;
         if (shoppingCartDTO.getDishId() != null) {
-            field = "dish:" + shoppingCartDTO.getDishId();
+            field = "dish::" + shoppingCartDTO.getDishId();
         } else {
-            field = "setmeal:" + shoppingCartDTO.getSetmealId();
+            field = "setmeal::" + shoppingCartDTO.getSetmealId();
         }
         
         // 从Redis中获取购物车商品
@@ -74,19 +78,12 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             
             Long dishId = shoppingCartDTO.getDishId();
             if (dishId != null) {
-                // 添加到购物车的是菜品
-                // 从缓存中获取菜品详情
-                String dishKey = "dish_detail:" + dishId;
-                Dish dish = (Dish) redisTemplate.opsForValue().get(dishKey);
-                if (dish == null) {
-                    // 缓存未命中，查询数据库
-                    dish = dishMapper.getById(dishId);
-                    // 放入缓存
-                    redisTemplate.opsForValue().set(dishKey, dish);
-                }
-                shoppingCart.setName(dish.getName());
-                shoppingCart.setImage(dish.getImage());
-                shoppingCart.setAmount(dish.getPrice());
+//                DishVO dishVO = dishService.getByIdWithFlavor(dishId);
+                DishVO dishVO = (DishVO) redisTemplate.opsForValue().get("dishDetailCache::" + dishId);
+//                if (dishVO != null) {}
+                shoppingCart.setName(dishVO.getName());
+                shoppingCart.setImage(dishVO.getImage());
+                shoppingCart.setAmount(dishVO.getPrice());
             } else {
                 // 添加到购物车的是套餐
                 // 从数据库查询套餐信息（套餐详情缓存未实现）
@@ -100,6 +97,8 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             
             // 存入Redis
             redisTemplate.opsForHash().put(cartKey, field, JSON.toJSONString(shoppingCart));
+            //设置过期时间
+            redisTemplate.expire(cartKey, CART_TTL, TimeUnit.MINUTES);
             
             // 同时存入数据库作为持久化备份
             shoppingCartMapper.insert(shoppingCart);
@@ -140,6 +139,8 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
                 redisTemplate.opsForHash().put(cartKey, field, JSON.toJSONString(cart));
             }
         }
+
+        redisTemplate.expire(cartKey, CART_TTL, TimeUnit.MINUTES);
         
         return shoppingCarts;
     }
@@ -148,6 +149,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
      * 清空购物车商品
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void cleanShoppingCart() {
         Long userId = BaseContext.getUserId();
         String cartKey = SHOPPING_CART_KEY_PREFIX + userId;
