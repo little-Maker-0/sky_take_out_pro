@@ -9,11 +9,13 @@ import com.sky.service.CategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import com.sky.service.DishCacheService;
-import com.sky.utils.RedisBloomFilter;
+import com.sky.service.RedisCacheService;
+
+import org.redisson.api.RBloomFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -27,12 +29,12 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
-    
-    @Autowired
-    private RedisBloomFilter redisBloomFilter;
 
     @Autowired
-    private DishCacheService dishCacheService;
+    private RedisCacheService redisCacheService;
+
+    @Resource
+    private RBloomFilter<Long> categoryBloomFilter;
 
     /**
      * 新增分类
@@ -46,7 +48,7 @@ public class CategoryController {
         Long categoryId = categoryService.save(categoryDTO);
         
         // 将新分类ID添加到布隆过滤器
-        redisBloomFilter.add("category", categoryId.toString());
+        categoryBloomFilter.add(categoryId);
         log.info("分类ID {} 已添加到布隆过滤器", categoryId);
         
         return Result.success();
@@ -76,8 +78,7 @@ public class CategoryController {
         log.info("删除分类：{}", id);
         categoryService.deleteById(id);
 
-        dishCacheService.evictCategoryList(id);
-
+        //todo 异步清理缓存
         return Result.success();
     }
 
@@ -91,8 +92,7 @@ public class CategoryController {
     public Result<String> update(@RequestBody CategoryDTO categoryDTO){
         categoryService.update(categoryDTO);
 
-        dishCacheService.evictCategoryList(categoryDTO.getId());
-
+        //todo 异步清理缓存
         return Result.success();
     }
 
@@ -107,7 +107,7 @@ public class CategoryController {
     public Result<String> startOrStop(@PathVariable("status") Integer status, Long id){
         categoryService.startOrStop(status, id);
 
-        dishCacheService.evictCategoryList(id);
+
 
         return Result.success();
     }

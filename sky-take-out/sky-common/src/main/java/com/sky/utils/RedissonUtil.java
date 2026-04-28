@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  */
 @Slf4j
 @Component
-public class RedissonLockUtil {
+public class RedissonUtil {
 
     private static final String LOCK_PREFIX = "lock:";
 
@@ -29,7 +29,8 @@ public class RedissonLockUtil {
         RLock lock = redissonClient.getLock(LOCK_PREFIX + lockKey);
         try {
             // waitTime=0 立即返回；leaseTime=-1 表示不固定租约，由看门狗续约
-            boolean ok = lock.tryLock(0, -1, TimeUnit.SECONDS);
+            // waitTime=3s 在网络抖动等异常情况下重试获取锁
+            boolean ok = lock.tryLock(3, -1, TimeUnit.SECONDS);
             if (ok) {
                 log.debug("获取锁成功: {}{}", LOCK_PREFIX, lockKey);
                 return lock;

@@ -15,9 +15,12 @@ import com.sky.mapper.SetmealMapper;
 import com.sky.result.PageResult;
 import com.sky.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RBloomFilter;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -34,6 +37,8 @@ public class CategoryServiceImpl implements CategoryService {
     private DishMapper dishMapper;
     @Autowired
     private SetmealMapper setmealMapper;
+    @Resource
+    private RBloomFilter<Long> categoryBloomFilter;
 
     /**
      * 新增分类
@@ -49,14 +54,10 @@ public class CategoryServiceImpl implements CategoryService {
         //分类状态默认为禁用状态0
         category.setStatus(StatusConstant.DISABLE);
 
-        //设置创建时间、修改时间、创建人、修改人
-//        category.setCreateTime(LocalDateTime.now());
-//        category.setUpdateTime(LocalDateTime.now());
-//        category.setCreateUser(BaseContext.getCurrentId());
-//        category.setUpdateUser(BaseContext.getCurrentId());
-
         categoryMapper.insert(category);
-        
+
+        //新增分类后，将新分类ID添加到布隆过滤器中
+        categoryBloomFilter.add(category.getId());
         return category.getId();
     }
 
@@ -93,6 +94,8 @@ public class CategoryServiceImpl implements CategoryService {
 
         //删除分类数据
         categoryMapper.deleteById(id);
+
+        // todo 调用线程池异步清理相关缓存
     }
 
     /**
@@ -102,12 +105,8 @@ public class CategoryServiceImpl implements CategoryService {
     public void update(CategoryDTO categoryDTO) {
         Category category = new Category();
         BeanUtils.copyProperties(categoryDTO,category);
-
-        //设置修改时间、修改人
-//        category.setUpdateTime(LocalDateTime.now());
-//        category.setUpdateUser(BaseContext.getCurrentId());
-
         categoryMapper.update(category);
+        // todo 调用线程池异步清理相关缓存
     }
 
     /**
@@ -123,6 +122,8 @@ public class CategoryServiceImpl implements CategoryService {
                 .updateUser(BaseContext.getEmployeeId())
                 .build();
         categoryMapper.update(category);
+
+        // todo 优化：直接同步清理缓存
     }
 
     /**

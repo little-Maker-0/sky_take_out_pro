@@ -38,6 +38,9 @@ sky:
   cache:
     # 用户端菜品列表/详情缓存过期时间（小时），失效失败时可依赖 TTL 兜底
     dish-ttl-hours: 12
+    shopping-cart-ttl-hours: 24
+  lock:
+
   jwt:
     # 设置jwt签名加密时使用的秘钥
     admin-secret-key: smx

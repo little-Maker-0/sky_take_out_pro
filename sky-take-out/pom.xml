@@ -30,6 +30,8 @@
         <jjwt>0.9.1</jjwt>
         <jaxb-api>2.3.1</jaxb-api>
         <poi>3.16</poi>
+        <wechatpay>0.4.8</wechatpay>
+        <redisson>3.16.8</redisson>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -120,7 +122,14 @@
             <dependency>
                 <groupId>com.github.wechatpay-apiv3</groupId>
                 <artifactId>wechatpay-apache-httpclient</artifactId>
-                <version>0.4.8</version>
+                <version>${wechatpay}</version>
+            </dependency>
+
+            <!-- redission -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

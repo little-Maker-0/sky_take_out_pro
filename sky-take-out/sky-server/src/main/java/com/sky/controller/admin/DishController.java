@@ -7,14 +7,16 @@ import com.sky.entity.Dish;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.DishService;
-import com.sky.utils.RedisBloomFilter;
+
 import com.sky.vo.DishVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RBloomFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -29,8 +31,8 @@ public class DishController {
     @Autowired
     private DishService dishService;
 
-    @Autowired
-    private RedisBloomFilter redisBloomFilter;
+    @Resource
+    private RBloomFilter<Long> dishBloomFilter;
 
     /**
      * 新增菜品
@@ -42,9 +44,8 @@ public class DishController {
     public Result save(@RequestBody DishDTO dishDTO) {
         log.info("新增菜品：{}", dishDTO);
         Long dishId = dishService.saveWithFlavor(dishDTO);
-
-        redisBloomFilter.add("dish", dishId.toString());
-
+        // 将新菜品ID添加到布隆过滤器
+        dishBloomFilter.add(dishId);
         return Result.success();
     }
 
@@ -63,7 +64,6 @@ public class DishController {
 
     /**
      * 菜品批量删除
-     *
      * @param ids
      * @return
      */
@@ -92,7 +92,6 @@ public class DishController {
 
     /**
      * 修改菜品
-     *
      * @param dishDTO
      * @return
      */

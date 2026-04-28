@@ -15,15 +15,19 @@ import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealDishMapper;
 import com.sky.mapper.SetmealMapper;
 import com.sky.result.PageResult;
+import com.sky.service.RedisCacheService;
 import com.sky.service.SetmealService;
 import com.sky.vo.DishItemVO;
 import com.sky.vo.SetmealVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
@@ -38,6 +42,9 @@ public class SetmealServiceImpl implements SetmealService {
 
     @Autowired
     private DishMapper dishMapper;
+
+    @Resource
+    private RedisCacheService redisCacheServiceImpl;
 
     /**
      * 新增套餐
@@ -61,6 +68,10 @@ public class SetmealServiceImpl implements SetmealService {
 
 //        保存套餐和菜品的关联关系
         setmealDishMapper.insertBatch(setmealDishes);
+
+        // todo 优化：调用线程池异步清理缓存
+        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
+        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
     }
 
     /**
@@ -98,6 +109,9 @@ public class SetmealServiceImpl implements SetmealService {
             setmealDishMapper.deleteBySetmaleId(id);
         });
 
+        // todo 优化：调用线程池异步清理缓存
+        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
+        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
     }
 
     /**
@@ -106,6 +120,7 @@ public class SetmealServiceImpl implements SetmealService {
      * @return
      */
     @Override
+    @Cacheable(cacheNames = "setmealCache", key = "#id")
     public SetmealVO getByIdWithDish(Long id) {
         SetmealVO setmealVO = new SetmealVO();
 
@@ -143,6 +158,10 @@ public class SetmealServiceImpl implements SetmealService {
 
 //        3.重新插入套餐和菜品的关联关系
         setmealDishMapper.insertBatch(setmealDishes);
+
+        //todo 调用线程池异步清理缓存
+        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
+        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
     }
 
     /**
@@ -169,6 +188,10 @@ public class SetmealServiceImpl implements SetmealService {
                 .status(status)
                 .build();
         setmealMapper.update(setmeal);
+
+        // todo 优化：直接同步清理缓存
+        redisCacheServiceImpl.clearCacheSync("setmealCache*");
+        redisCacheServiceImpl.clearCacheSync("dishListCache*");
     }
 
     /**

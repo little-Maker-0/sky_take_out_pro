@@ -9,17 +9,17 @@ import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
 import com.sky.entity.DishFlavor;
 import com.sky.entity.Setmeal;
-import com.sky.entity.SetmealDish;
 import com.sky.exception.DeletionNotAllowedException;
 import com.sky.mapper.DishFlavorMapper;
 import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealDishMapper;
 import com.sky.mapper.SetmealMapper;
 import com.sky.result.PageResult;
-import com.sky.event.DishCacheInvalidateEvent;
 import com.sky.service.DishService;
-import com.sky.utils.RedisBloomFilter;
+
+import com.sky.service.RedisCacheService;
 import com.sky.vo.DishVO;
+import org.redisson.api.RBloomFilter;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -27,8 +27,10 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 @Service
 public class DishServiceImpl implements DishService {
@@ -45,11 +47,11 @@ public class DishServiceImpl implements DishService {
     @Autowired
     private SetmealMapper setmealMapper;
 
-    @Autowired
-    private ApplicationEventPublisher applicationEventPublisher;
+    @Resource
+    private RBloomFilter<Long> dishBloomFilter;
 
-    @Autowired
-    private RedisBloomFilter redisBloomFilter;
+    @Resource
+    private RedisCacheService redisCacheServiceImpl;
 
     /**
      * 新增菜品
@@ -75,10 +77,11 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.insertBatch(flavors);
         }
 
-        applicationEventPublisher.publishEvent(
-                DishCacheInvalidateEvent.categoryList(dishDTO.getCategoryId()));
-
-        redisBloomFilter.add("dish", String.valueOf(dishId));
+        // todo 优化：调用线程池异步清理
+        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
+        redisCacheServiceImpl.clearCacheAsync("dishDetailCache*");
+        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
+        dishBloomFilter.add(dishId);
         return dishId;
     }
 
@@ -125,7 +128,10 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.deleteByDishId(id);
         });
 
-        applicationEventPublisher.publishEvent(DishCacheInvalidateEvent.allFromDeleteBatch());
+        // todo 优化：调用线程池异步清理，一般只在非主业务营业时间内执行，数据时效性要求不高
+        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
+        redisCacheServiceImpl.clearCacheAsync("dishDetailCache*");
+        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
     }
 
     /**
@@ -180,7 +186,10 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.insertBatch(flavors);
         }
 
-        applicationEventPublisher.publishEvent(DishCacheInvalidateEvent.all());
+        // todo 技术简化：自定义一个线程池专门处理异步清理
+        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
+        redisCacheServiceImpl.clearCacheAsync("dishDetailCache*");
+        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
     }
 
     /**
@@ -188,6 +197,7 @@ public class DishServiceImpl implements DishService {
      * @param categoryId
      * @return
      */
+    // todo 大键优化
     @Override
     @Cacheable(cacheNames = "dishListCache", key = "#categoryId")
     public List<Dish> list(Long categoryId) {
@@ -206,7 +216,7 @@ public class DishServiceImpl implements DishService {
     @Override
     @Cacheable(
             cacheNames = "dishListCache",
-            key = "#dish.categoryId + '-' + (T(java.util.Objects).toString(#dish.status))")
+            key = "#dish.categoryId + ':' + (T(java.util.Objects).toString(#dish.status))")
     public List<DishVO> listWithFlavor(Dish dish) {
         List<Dish> dishList = dishMapper.list(dish);
 
@@ -226,6 +236,8 @@ public class DishServiceImpl implements DishService {
         return dishVOArrayList;
     }
 
+
+    // todo 超买超卖问题
     /**
      * 菜品起售停售
      * @param status
@@ -257,7 +269,10 @@ public class DishServiceImpl implements DishService {
             }
         }
 
-        applicationEventPublisher.publishEvent(DishCacheInvalidateEvent.all());
+        // todo 改成同步清理，数据的时效性要求较高，需要将菜品最新状态及时反映到缓存中，防止生成“无效订单”
+        redisCacheServiceImpl.clearCacheSync("dishListCache*");
+        redisCacheServiceImpl.clearCacheSync("dishDetailCache*");
+        redisCacheServiceImpl.clearCacheSync("setmealCache*");
     }
 
 }

@@ -3,15 +3,21 @@ package com.sky.controller.notify;
 import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.sky.context.BaseContext;
+import com.sky.exception.OrderBusinessException;
 import com.sky.properties.WeChatProperties;
 import com.sky.service.OrderService;
+import com.sky.utils.RedissonUtil;
+import com.wechat.pay.contrib.apache.httpclient.exception.WechatPayException;
 import com.wechat.pay.contrib.apache.httpclient.util.AesUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.entity.ContentType;
+import org.redisson.api.RLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
@@ -32,6 +38,9 @@ public class PayNotifyController {
     @Autowired
     private WeChatProperties weChatProperties;
 
+    @Resource
+    private RedissonUtil redissonUtil;
+
 
     /**
      * 支付成功回调
@@ -40,26 +49,36 @@ public class PayNotifyController {
      */
     @RequestMapping("/paySuccess")
     public void paySuccessNotify(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        //读取数据
-        String body = readData(request);
-        log.info("支付成功回调：{}", body);
+        Long userId = BaseContext.getUserId();
+        RLock lock = redissonUtil.tryLock("paySuccess:" + userId);
+        if (lock == null) {
+            log.info("支付成功回调：用户 {} 正在处理中，稍后再试", userId);
+            throw new OrderBusinessException("支付回调正在处理中，稍后再试");
+        }
+        try {
+            //读取数据
+            String body = readData(request);
+            log.info("支付成功回调：{}", body);
 
-        //数据解密
-        String plainText = decryptData(body);
-        log.info("解密后的文本：{}", plainText);
+            //数据解密
+            String plainText = decryptData(body);
+            log.info("解密后的文本：{}", plainText);
 
-        JSONObject jsonObject = JSON.parseObject(plainText);
-        String outTradeNo = jsonObject.getString("out_trade_no");//商户平台订单号
-        String transactionId = jsonObject.getString("transaction_id");//微信支付交易号
+            JSONObject jsonObject = JSON.parseObject(plainText);
+            String outTradeNo = jsonObject.getString("out_trade_no");//商户平台订单号
+            String transactionId = jsonObject.getString("transaction_id");//微信支付交易号
 
-        log.info("商户平台订单号：{}", outTradeNo);
-        log.info("微信支付交易号：{}", transactionId);
+            log.info("商户平台订单号：{}", outTradeNo);
+            log.info("微信支付交易号：{}", transactionId);
 
-        //业务处理，修改订单状态、来单提醒
-        orderService.paySuccess(outTradeNo);
+            //业务处理，修改订单状态、来单提醒
+            orderService.paySuccess(outTradeNo);
 
-        //给微信响应
-        responseToWeixin(response);
+            //给微信响应
+            responseToWeixin(response);
+        } finally {
+            redissonUtil.unlockSafe(lock);
+        }
     }
 
     /**

@@ -15,9 +15,9 @@ import com.sky.exception.ShoppingCartBusinessException;
 import com.sky.mapper.*;
 import com.sky.result.PageResult;
 import com.sky.service.OrderService;
+import com.sky.service.RedisCacheService;
 import com.sky.utils.HttpClientUtil;
-import com.sky.utils.LockRenewalThread;
-import com.sky.utils.RedisLockUtil;
+import com.sky.utils.RedissonUtil;
 import com.sky.utils.WeChatPayUtil;
 import com.sky.vo.OrderPaymentVO;
 import com.sky.vo.OrderStatisticsVO;
@@ -25,27 +25,33 @@ import com.sky.vo.OrderSubmitVO;
 import com.sky.vo.OrderVO;
 import com.sky.websocket.WebSocketServer;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RLock;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.annotation.Order;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
-import java.math.BigDecimal;
+import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.Executor;
 import java.util.stream.Collectors;
 
 @Service
 @Slf4j
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
-    private RedisLockUtil redisLockUtil;
+    @Resource
+    private RedissonUtil redissonUtil;
+
+    @Resource
+    private RedisCacheService redisCacheServiceImpl;
 
     @Autowired
     private OrderMapper orderMapper;
@@ -80,16 +86,14 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
+    @Transactional
     public OrderSubmitVO submitOrder(OrdersSubmitDTO ordersSubmitDTO) {
-        String lockKey = "order:submit:" + BaseContext.getUserId();
-        String lockValue = redisLockUtil.tryLock(lockKey, 10);
+        String lockKey = "submit:" + BaseContext.getUserId();
+        RLock lock = redissonUtil.tryLock(lockKey);
 
-        if (lockValue == null) {
+        if (lock == null) {
             throw new OrderBusinessException("订单正在处理中，请勿重复提交");
         }
-
-        LockRenewalThread renewalThread = new LockRenewalThread(redisLockUtil, lockKey, lockValue, 10);
-        renewalThread.start();
 
         try {
 //        异常情况的处理（收货地址为空、超出配送氛围、购物车为空）
@@ -140,6 +144,7 @@ public class OrderServiceImpl implements OrderService {
 
 //        清理购物车中的数据
             shoppingCartMapper.deleteByUserId(currentId);
+            redisCacheServiceImpl.cleanDetailCache("shoppingcart:" + currentId);
 
 //        封装返回结果
             OrderSubmitVO submitVO = OrderSubmitVO.builder()
@@ -151,8 +156,7 @@ public class OrderServiceImpl implements OrderService {
 
             return submitVO;
         } finally {
-            renewalThread.stopRenewal();
-            redisLockUtil.unlock(lockKey, lockValue);
+            redissonUtil.unlockSafe(lock);
         }
     }
 
@@ -195,47 +199,29 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public void paySuccess(String outTradeNo) {
-        String lockKey = "order:pay:" + outTradeNo;
-        String lockValue = redisLockUtil.tryLock(lockKey, 10);
-
-        if (lockValue == null) {
-            log.info("支付回调正在处理中: {}", outTradeNo);
+        Orders orderDB = orderMapper.getByNumberAndUserId(outTradeNo, BaseContext.getUserId());
+        if (orderDB == null) {
+            log.error("订单不存在: {}", outTradeNo);
+            return;
+        }
+        if (orderDB.getPayStatus() == Orders.PAID) {
+            log.info("订单已支付，跳过处理: {}", outTradeNo);
             return;
         }
 
-        LockRenewalThread renewalThread = new LockRenewalThread(redisLockUtil, lockKey, lockValue, 10);
-        renewalThread.start();
+        Orders orders = Orders.builder()
+                .id(orderDB.getId())
+                .status(Orders.TO_BE_CONFIRMED)
+                .payStatus(Orders.PAID)
+                .checkoutTime(LocalDateTime.now())
+                .build();
+        orderMapper.update(orders);
 
-        try {
-            Orders orderDB = orderMapper.getByNumberAndUserId(outTradeNo, BaseContext.getUserId());
-            if (orderDB == null) {
-                log.error("订单不存在: {}", outTradeNo);
-                return;
-            }
-
-            if (orderDB.getPayStatus() == Orders.PAID) {
-                log.info("订单已支付，跳过处理: {}", outTradeNo);
-                return;
-            }
-
-            Orders orders = Orders.builder()
-                    .id(orderDB.getId())
-                    .status(Orders.TO_BE_CONFIRMED)
-                    .payStatus(Orders.PAID)
-                    .checkoutTime(LocalDateTime.now())
-                    .build();
-            orderMapper.update(orders);
-
-            HashMap map = new HashMap();
-            map.put("type", 1);
-            map.put("orderId", orders.getId());
-            map.put("content", "订单号：" + outTradeNo);
-
-            webSocketServer.sendToMerchants(JSON.toJSONString(map));
-        } finally {
-            renewalThread.stopRenewal();
-            redisLockUtil.unlock(lockKey, lockValue);
-        }
+        HashMap map = new HashMap();
+        map.put("type", 1);
+        map.put("orderId", orders.getId());
+        map.put("content", "订单号：" + outTradeNo);
+        webSocketServer.sendToMerchants(JSON.toJSONString(map));
     }
 
     /**
