@@ -12,11 +12,9 @@ import com.sky.vo.DishVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.redisson.api.RBloomFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -31,9 +29,6 @@ public class DishController {
     @Autowired
     private DishService dishService;
 
-    @Resource
-    private RBloomFilter<Long> dishBloomFilter;
-
     /**
      * 新增菜品
      * @param dishDTO
@@ -43,9 +38,7 @@ public class DishController {
     @ApiOperation("新增菜品")
     public Result save(@RequestBody DishDTO dishDTO) {
         log.info("新增菜品：{}", dishDTO);
-        Long dishId = dishService.saveWithFlavor(dishDTO);
-        // 将新菜品ID添加到布隆过滤器
-        dishBloomFilter.add(dishId);
+        dishService.saveWithFlavor(dishDTO);
         return Result.success();
     }
 

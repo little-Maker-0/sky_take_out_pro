@@ -5,17 +5,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
+import org.springframework.data.redis.cache.RedisCacheWriter;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 
 import javax.annotation.Resource;
 import java.time.Duration;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 /**
- * Spring Cache（Redis）统一过期时间；与简历「声明式缓存 + 合理 TTL」一致。
+ * Spring Cache（Redis）配置：随机 TTL 防止缓存雪崩，transactionAware 保证 DB 事务回滚时缓存不被污染。
  */
 @Configuration
 public class SpringCacheConfiguration {
@@ -26,6 +25,9 @@ public class SpringCacheConfiguration {
     @Value("${sky.cache.dish-ttl-hours}")
     private long dishTtlHours;
 
+    @Value("${sky.cache.ttl-jitter-factor:0.2}")
+    private double ttlJitterFactor;
+
     @Bean
     public RedisCacheManager redisCacheManager(
             RedisConnectionFactory connectionFactory) {
@@ -35,7 +37,10 @@ public class SpringCacheConfiguration {
                         redisTemplate.getValueSerializer()))
                 .entryTtl(ttl);
 
-        return RedisCacheManager.builder(connectionFactory)
+        RedisCacheWriter writer = RandomTtlRedisCacheWriter.wrap(
+                RedisCacheWriter.nonLockingRedisCacheWriter(connectionFactory), ttlJitterFactor);
+
+        return RedisCacheManager.builder(writer)
                 .cacheDefaults(config)
                 .transactionAware()
                 .build();

@@ -19,6 +19,7 @@ import org.redisson.api.RBloomFilter;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
@@ -40,6 +41,9 @@ public class CategoryServiceImpl implements CategoryService {
     @Resource
     private RBloomFilter<Long> categoryBloomFilter;
 
+    @Resource
+    private TransactionAwareCacheService transactionAwareCacheService;
+
     /**
      * 新增分类
      * @param categoryDTO
@@ -56,8 +60,9 @@ public class CategoryServiceImpl implements CategoryService {
 
         categoryMapper.insert(category);
 
-        //新增分类后，将新分类ID添加到布隆过滤器中
+        // 新增分类后，将新分类ID添加到布隆过滤器中
         categoryBloomFilter.add(category.getId());
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
         return category.getId();
     }
 
@@ -77,6 +82,7 @@ public class CategoryServiceImpl implements CategoryService {
      * 根据id删除分类
      * @param id
      */
+    @Transactional(rollbackFor = Exception.class)
     public void deleteById(Long id) {
         //查询当前分类是否关联了菜品，如果关联了就抛出业务异常
         Integer count = dishMapper.countByCategoryId(id);
@@ -95,18 +101,22 @@ public class CategoryServiceImpl implements CategoryService {
         //删除分类数据
         categoryMapper.deleteById(id);
 
-        // todo 调用线程池异步清理相关缓存
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
     }
 
     /**
      * 修改分类
      * @param categoryDTO
      */
+    @Transactional(rollbackFor = Exception.class)
     public void update(CategoryDTO categoryDTO) {
         Category category = new Category();
         BeanUtils.copyProperties(categoryDTO,category);
         categoryMapper.update(category);
-        // todo 调用线程池异步清理相关缓存
+
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
     }
 
     /**
@@ -114,6 +124,7 @@ public class CategoryServiceImpl implements CategoryService {
      * @param status
      * @param id
      */
+    @Transactional(rollbackFor = Exception.class)
     public void startOrStop(Integer status, Long id) {
         Category category = Category.builder()
                 .id(id)
@@ -123,7 +134,8 @@ public class CategoryServiceImpl implements CategoryService {
                 .build();
         categoryMapper.update(category);
 
-        // todo 优化：直接同步清理缓存
+        transactionAwareCacheService.evictAfterCommit("dishListCache*");
+        transactionAwareCacheService.evictAfterCommit("setmealCache*");
     }
 
     /**

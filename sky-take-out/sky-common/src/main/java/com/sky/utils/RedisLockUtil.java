@@ -2,6 +2,7 @@ package com.sky.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Component;
@@ -17,15 +18,15 @@ public class RedisLockUtil {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
-    //默认加锁时间30秒
-    private static final long DEFAULT_EXPIRE_TIME = 30;
+    @Value("${sky.lock.default-expire-seconds:30}")
+    private long defaultExpireTime;
 
     private static final String LOCK_PREFIX = "lock:";
 
     private static final String UNLOCK_SCRIPT = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
 
     public String tryLock(String lockKey) {
-        return tryLock(lockKey, DEFAULT_EXPIRE_TIME);
+        return tryLock(lockKey, defaultExpireTime);
     }
 
     public String tryLock(String lockKey, long expireTime) {

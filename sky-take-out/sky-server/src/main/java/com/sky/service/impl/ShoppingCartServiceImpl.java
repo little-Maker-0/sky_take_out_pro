@@ -7,7 +7,6 @@ import com.sky.entity.Setmeal;
 import com.sky.entity.ShoppingCart;
 import com.sky.mapper.SetmealMapper;
 import com.sky.mapper.ShoppingCartMapper;
-import com.sky.service.DishService;
 import com.sky.service.ShoppingCartService;
 import com.sky.utils.RedissonUtil;
 import com.sky.vo.DishVO;
@@ -41,7 +40,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     private RedisTemplate redisTemplate;
 
     @Resource
-    private RedissonUtil redissonUtil;
+    private TransactionAwareCacheService transactionAwareCacheService;
 
     @Value("${sky.cache.shopping-cart-ttl-hours}")
     private Long CART_TTL; // 购物车数据在Redis中的过期时间
@@ -72,15 +71,18 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             // 商品已存在，更新数量
             ShoppingCart shoppingCart = JSON.parseObject(cartItemJson, ShoppingCart.class);
             shoppingCart.setNumber(shoppingCart.getNumber() + 1);
-            redisTemplate.opsForHash().put(cartKey, field, shoppingCart);
-            redisTemplate.expire(cartKey, CART_TTL, TimeUnit.HOURS);
+            // DB 先写，Redis 在事务提交后更新
             shoppingCartMapper.updateNumberById(shoppingCart);
+            transactionAwareCacheService.executeAfterCommit(() -> {
+                redisTemplate.opsForHash().put(cartKey, field, shoppingCart);
+                redisTemplate.expire(cartKey, CART_TTL, TimeUnit.HOURS);
+            });
         } else {
             // 商品不存在，添加新商品
             ShoppingCart shoppingCart = new ShoppingCart();
             BeanUtils.copyProperties(shoppingCartDTO, shoppingCart);
             shoppingCart.setUserId(userId);
-            
+
             Long dishId = shoppingCartDTO.getDishId();
             if (dishId != null) {
 //                DishVO dishVO = dishService.getByIdWithFlavor(dishId);
@@ -99,14 +101,13 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             }
             shoppingCart.setNumber(1);
             shoppingCart.setCreateTime(LocalDateTime.now());
-            
-            // 存入Redis
-            redisTemplate.opsForHash().put(cartKey, field, shoppingCart);
-            //刷新过期时间
-            redisTemplate.expire(cartKey, CART_TTL, TimeUnit.MINUTES);
-            
-            // 同时存入数据库作为持久化备份
+
+            // DB 先写，Redis 在事务提交后更新
             shoppingCartMapper.insert(shoppingCart);
+            transactionAwareCacheService.executeAfterCommit(() -> {
+                redisTemplate.opsForHash().put(cartKey, field, shoppingCart);
+                redisTemplate.expire(cartKey, CART_TTL, TimeUnit.HOURS);
+            });
         }
     }
 
@@ -160,8 +161,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         String cartKey = SHOPPING_CART_KEY_PREFIX + userId;
         // 清空数据库中的购物车
         shoppingCartMapper.deleteByUserId(userId);
-        // 清空Redis中的购物车
-        redisTemplate.delete(cartKey);
+        // Redis 在事务提交后清空
+        transactionAwareCacheService.executeAfterCommit(() ->
+            redisTemplate.delete(cartKey));
     }
 
     /**
@@ -169,10 +171,11 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
      * @param shoppingCartDTO
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void subShoppingCart(ShoppingCartDTO shoppingCartDTO) {
         Long userId = BaseContext.getUserId();
         String cartKey = SHOPPING_CART_KEY_PREFIX + userId;
-        
+
         // 生成商品Field
         String field;
         if (shoppingCartDTO.getDishId() != null) {
@@ -180,25 +183,25 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         } else {
             field = "setmeal:" + shoppingCartDTO.getSetmealId();
         }
-        
+
         // 从Redis中获取购物车商品
         String cartItemJson = (String) redisTemplate.opsForHash().get(cartKey, field);
-        
+
         if (cartItemJson != null) {
             ShoppingCart shoppingCart = JSON.parseObject(cartItemJson, ShoppingCart.class);
             Integer number = shoppingCart.getNumber();
-            
+
             if (number == 1) {
-                // 当前商品在购物车中份数为1，直接删除
-                redisTemplate.opsForHash().delete(cartKey, field);
-                // 同时从数据库删除
+                // DB 先删，Redis 在事务提交后删除
                 shoppingCartMapper.deleteById(shoppingCart.getId());
+                transactionAwareCacheService.executeAfterCommit(() ->
+                    redisTemplate.opsForHash().delete(cartKey, field));
             } else {
-                // 当前商品在购物车中的份数不为1，修改份数
+                // DB 先更新，Redis 在事务提交后更新
                 shoppingCart.setNumber(number - 1);
-                redisTemplate.opsForHash().put(cartKey, field, shoppingCart);
-                // 同时更新数据库
                 shoppingCartMapper.updateNumberById(shoppingCart);
+                transactionAwareCacheService.executeAfterCommit(() ->
+                    redisTemplate.opsForHash().put(cartKey, field, shoppingCart));
             }
         }
     }

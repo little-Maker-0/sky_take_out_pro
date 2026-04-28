@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.sky.constant.MessageConstant;
+import com.sky.constant.StatusConstant;
 import com.sky.context.BaseContext;
 import com.sky.dto.*;
 import com.sky.entity.*;
@@ -15,7 +16,6 @@ import com.sky.exception.ShoppingCartBusinessException;
 import com.sky.mapper.*;
 import com.sky.result.PageResult;
 import com.sky.service.OrderService;
-import com.sky.service.RedisCacheService;
 import com.sky.utils.HttpClientUtil;
 import com.sky.utils.RedissonUtil;
 import com.sky.utils.WeChatPayUtil;
@@ -51,13 +51,19 @@ public class OrderServiceImpl implements OrderService {
     private RedissonUtil redissonUtil;
 
     @Resource
-    private RedisCacheService redisCacheServiceImpl;
+    private TransactionAwareCacheService transactionAwareCacheService;
 
     @Autowired
     private OrderMapper orderMapper;
 
     @Autowired
     private OrderDetailMapper orderDetailMapper;
+
+    @Autowired
+    private DishMapper dishMapper;
+
+    @Autowired
+    private SetmealMapper setmealMapper;
 
     @Autowired
     private ShoppingCartMapper shoppingCartMapper;
@@ -117,6 +123,22 @@ public class OrderServiceImpl implements OrderService {
                 throw new ShoppingCartBusinessException(MessageConstant.SHOPPING_CART_IS_NULL);
             }
 
+            // 校验购物车中商品是否仍在销售（防止停售未即时生效导致超卖）
+            for (ShoppingCart cart : shoppingCartList) {
+                if (cart.getDishId() != null) {
+                    Dish dish = dishMapper.getById(cart.getDishId());
+                    if (dish == null || dish.getStatus() == StatusConstant.DISABLE) {
+                        throw new OrderBusinessException("菜品「" + cart.getName() + "」已停售，无法下单");
+                    }
+                }
+                if (cart.getSetmealId() != null) {
+                    Setmeal setmeal = setmealMapper.getById(cart.getSetmealId());
+                    if (setmeal == null || setmeal.getStatus() == StatusConstant.DISABLE) {
+                        throw new OrderBusinessException("套餐「" + cart.getName() + "」已停售，无法下单");
+                    }
+                }
+            }
+
             //构造订单数据
             Orders order = new Orders();
             BeanUtils.copyProperties(ordersSubmitDTO, order);
@@ -144,7 +166,8 @@ public class OrderServiceImpl implements OrderService {
 
 //        清理购物车中的数据
             shoppingCartMapper.deleteByUserId(currentId);
-            redisCacheServiceImpl.cleanDetailCache("shoppingcart:" + currentId);
+            transactionAwareCacheService.executeAfterCommit(() ->
+                transactionAwareCacheService.evictKey("shoppingcart:" + currentId));
 
 //        封装返回结果
             OrderSubmitVO submitVO = OrderSubmitVO.builder()

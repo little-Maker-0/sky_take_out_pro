@@ -9,13 +9,9 @@ import com.sky.service.CategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import com.sky.service.RedisCacheService;
-
-import org.redisson.api.RBloomFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -30,12 +26,6 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @Autowired
-    private RedisCacheService redisCacheService;
-
-    @Resource
-    private RBloomFilter<Long> categoryBloomFilter;
-
     /**
      * 新增分类
      * @param categoryDTO
@@ -45,12 +35,7 @@ public class CategoryController {
     @ApiOperation("新增分类")
     public Result<String> save(@RequestBody CategoryDTO categoryDTO){
         log.info("新增分类：{}", categoryDTO);
-        Long categoryId = categoryService.save(categoryDTO);
-        
-        // 将新分类ID添加到布隆过滤器
-        categoryBloomFilter.add(categoryId);
-        log.info("分类ID {} 已添加到布隆过滤器", categoryId);
-        
+        categoryService.save(categoryDTO);
         return Result.success();
     }
 
@@ -78,7 +63,7 @@ public class CategoryController {
         log.info("删除分类：{}", id);
         categoryService.deleteById(id);
 
-        //todo 异步清理缓存
+        // 缓存清理已由 Service 层事务感知处理
         return Result.success();
     }
 
@@ -92,7 +77,7 @@ public class CategoryController {
     public Result<String> update(@RequestBody CategoryDTO categoryDTO){
         categoryService.update(categoryDTO);
 
-        //todo 异步清理缓存
+        // 缓存清理已由 Service 层事务感知处理
         return Result.success();
     }
 

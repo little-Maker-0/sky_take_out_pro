@@ -83,7 +83,7 @@
         </where>
     </select>
 
-<!--    根据条件统计套餐数量-->
+    <!--    根据条件统计套餐数量-->
     <select id="countByMap" resultType="java.lang.Integer">
         select count(id) from setmeal
         <where>
@@ -94,5 +94,10 @@
                 and category_id = #{categoryId}
             </if>
         </where>
+    </select>
+
+    <!--    获取所有套餐ID（布隆过滤器初始化）-->
+    <select id="getAllSetmealIds" resultType="java.lang.Long">
+        select id from setmeal
     </select>
 </mapper>

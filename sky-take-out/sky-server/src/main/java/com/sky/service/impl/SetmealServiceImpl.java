@@ -15,15 +15,14 @@ import com.sky.mapper.DishMapper;
 import com.sky.mapper.SetmealDishMapper;
 import com.sky.mapper.SetmealMapper;
 import com.sky.result.PageResult;
-import com.sky.service.RedisCacheService;
 import com.sky.service.SetmealService;
 import com.sky.vo.DishItemVO;
+import org.redisson.api.RBloomFilter;
 import com.sky.vo.SetmealVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,7 +43,10 @@ public class SetmealServiceImpl implements SetmealService {
     private DishMapper dishMapper;
 
     @Resource
-    private RedisCacheService redisCacheServiceImpl;
+    private TransactionAwareCacheService transactionAwareCacheService;
+
+    @Resource
+    private RBloomFilter<Long> setmealBloomFilter;
 
     /**
      * 新增套餐
@@ -69,9 +71,9 @@ public class SetmealServiceImpl implements SetmealService {
 //        保存套餐和菜品的关联关系
         setmealDishMapper.insertBatch(setmealDishes);
 
-        // todo 优化：调用线程池异步清理缓存
-        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
-        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
+        setmealBloomFilter.add(id);
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
     }
 
     /**
@@ -92,6 +94,7 @@ public class SetmealServiceImpl implements SetmealService {
      * @param ids
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void deleteBatch(List<Long> ids) {
 //        起售中的套餐不能删除
         ids.forEach(id->{
@@ -109,9 +112,8 @@ public class SetmealServiceImpl implements SetmealService {
             setmealDishMapper.deleteBySetmaleId(id);
         });
 
-        // todo 优化：调用线程池异步清理缓存
-        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
-        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
     }
 
     /**
@@ -140,6 +142,7 @@ public class SetmealServiceImpl implements SetmealService {
      * @param setmealDTO
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void update(SetmealDTO setmealDTO) {
         Setmeal setmeal = new Setmeal();
         BeanUtils.copyProperties(setmealDTO, setmeal);
@@ -159,9 +162,8 @@ public class SetmealServiceImpl implements SetmealService {
 //        3.重新插入套餐和菜品的关联关系
         setmealDishMapper.insertBatch(setmealDishes);
 
-        //todo 调用线程池异步清理缓存
-        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
-        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
     }
 
     /**
@@ -170,6 +172,7 @@ public class SetmealServiceImpl implements SetmealService {
      * @param id
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void startOrStop(Integer status, Long id) {
 //        起售套餐时，判断套餐内是否有停售菜品，有停售菜品提示"套餐内包含未启售菜品，无法启售"
         if (status == StatusConstant.ENABLE) {
@@ -189,9 +192,8 @@ public class SetmealServiceImpl implements SetmealService {
                 .build();
         setmealMapper.update(setmeal);
 
-        // todo 优化：直接同步清理缓存
-        redisCacheServiceImpl.clearCacheSync("setmealCache*");
-        redisCacheServiceImpl.clearCacheSync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommit("setmealCache*");
+        transactionAwareCacheService.evictAfterCommit("dishListCache*");
     }
 
     /**

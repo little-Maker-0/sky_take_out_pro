@@ -39,7 +39,36 @@ sky:
     # 用户端菜品列表/详情缓存过期时间（小时），失效失败时可依赖 TTL 兜底
     dish-ttl-hours: 12
     shopping-cart-ttl-hours: 24
+    # 缓存雪崩防护：TTL 随机偏移比例（±20%），避免大量缓存同时过期
+    ttl-jitter-factor: 0.2
+    # SCAN 命令单次迭代返回的元素数量
+    scan-batch-size: 100
+
+  # 布隆过滤器配置
+  bloom-filter:
+    dish:
+      expected-insertions: 200
+      false-positive-rate: 0.01
+    category:
+      expected-insertions: 50
+      false-positive-rate: 0.01
+    setmeal:
+      expected-insertions: 100
+      false-positive-rate: 0.01
+
+  # 分布式锁配置
   lock:
+    wait-time-seconds: 3
+    default-expire-seconds: 30
+
+  # 异步线程池配置
+  async:
+    core-pool-multiplier: 2
+    max-pool-multiplier: 4
+    queue-capacity: 500
+    keep-alive-seconds: 60
+    await-termination-seconds: 60
+    thread-name-prefix: "AsyncDel-"
 
   jwt:
     # 设置jwt签名加密时使用的秘钥

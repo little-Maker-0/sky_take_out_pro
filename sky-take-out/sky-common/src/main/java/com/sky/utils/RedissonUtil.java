@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.TimeUnit;
@@ -17,6 +18,9 @@ public class RedissonUtil {
 
     private static final String LOCK_PREFIX = "lock:";
 
+    @Value("${sky.lock.wait-time-seconds:3}")
+    private long waitTimeSeconds;
+
     @Autowired
     private RedissonClient redissonClient;
 
@@ -28,9 +32,8 @@ public class RedissonUtil {
     public RLock tryLock(String lockKey) {
         RLock lock = redissonClient.getLock(LOCK_PREFIX + lockKey);
         try {
-            // waitTime=0 立即返回；leaseTime=-1 表示不固定租约，由看门狗续约
-            // waitTime=3s 在网络抖动等异常情况下重试获取锁
-            boolean ok = lock.tryLock(3, -1, TimeUnit.SECONDS);
+            // leaseTime=-1 表示不固定租约，由看门狗续约
+            boolean ok = lock.tryLock(waitTimeSeconds, -1, TimeUnit.SECONDS);
             if (ok) {
                 log.debug("获取锁成功: {}{}", LOCK_PREFIX, lockKey);
                 return lock;

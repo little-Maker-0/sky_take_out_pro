@@ -17,20 +17,17 @@ import com.sky.mapper.SetmealMapper;
 import com.sky.result.PageResult;
 import com.sky.service.DishService;
 
-import com.sky.service.RedisCacheService;
 import com.sky.vo.DishVO;
 import org.redisson.api.RBloomFilter;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executor;
 
 @Service
 public class DishServiceImpl implements DishService {
@@ -51,7 +48,7 @@ public class DishServiceImpl implements DishService {
     private RBloomFilter<Long> dishBloomFilter;
 
     @Resource
-    private RedisCacheService redisCacheServiceImpl;
+    private TransactionAwareCacheService transactionAwareCacheService;
 
     /**
      * 新增菜品
@@ -77,11 +74,10 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.insertBatch(flavors);
         }
 
-        // todo 优化：调用线程池异步清理
-        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
-        redisCacheServiceImpl.clearCacheAsync("dishDetailCache*");
-        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
         dishBloomFilter.add(dishId);
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishDetailCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
         return dishId;
     }
 
@@ -128,10 +124,9 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.deleteByDishId(id);
         });
 
-        // todo 优化：调用线程池异步清理，一般只在非主业务营业时间内执行，数据时效性要求不高
-        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
-        redisCacheServiceImpl.clearCacheAsync("dishDetailCache*");
-        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishDetailCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
     }
 
     /**
@@ -186,10 +181,9 @@ public class DishServiceImpl implements DishService {
             dishFlavorMapper.insertBatch(flavors);
         }
 
-        // todo 技术简化：自定义一个线程池专门处理异步清理
-        redisCacheServiceImpl.clearCacheAsync("dishListCache*");
-        redisCacheServiceImpl.clearCacheAsync("dishDetailCache*");
-        redisCacheServiceImpl.clearCacheAsync("setmealCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishListCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("dishDetailCache*");
+        transactionAwareCacheService.evictAfterCommitAsync("setmealCache*");
     }
 
     /**
@@ -197,7 +191,6 @@ public class DishServiceImpl implements DishService {
      * @param categoryId
      * @return
      */
-    // todo 大键优化
     @Override
     @Cacheable(cacheNames = "dishListCache", key = "#categoryId")
     public List<Dish> list(Long categoryId) {
@@ -269,10 +262,9 @@ public class DishServiceImpl implements DishService {
             }
         }
 
-        // todo 改成同步清理，数据的时效性要求较高，需要将菜品最新状态及时反映到缓存中，防止生成“无效订单”
-        redisCacheServiceImpl.clearCacheSync("dishListCache*");
-        redisCacheServiceImpl.clearCacheSync("dishDetailCache*");
-        redisCacheServiceImpl.clearCacheSync("setmealCache*");
+        transactionAwareCacheService.evictAfterCommit("dishListCache*");
+        transactionAwareCacheService.evictAfterCommit("dishDetailCache*");
+        transactionAwareCacheService.evictAfterCommit("setmealCache*");
     }
 
 }
